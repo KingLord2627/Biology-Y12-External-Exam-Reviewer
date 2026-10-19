@@ -1,0 +1,3334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCAA Biology Unit 3 Topic 1: Biodiversity & Populations Exam Reviewer</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    /* 3D Flip Card Styles */
+    .perspective-1000 { perspective: 1000px; }
+    .transform-style-3d { transform-style: preserve-3d; }
+    .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .rotate-y-180 { transform: rotateY(180deg); }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            qcaa: {
+              blue: '#1e3a8a',
+              amber: '#d97706',
+              purple: '#6d28d9',
+              teal: '#0d9488'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- Top Header Banner -->
+  <header class="bg-gradient-to-r from-emerald-800 via-teal-900 to-slate-900 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold text-xl shadow-inner">
+          🧬
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-emerald-400 text-slate-950 rounded-md">QCAA Senior Biology</span>
+            <span class="text-xs text-emerald-200">Unit 3 • Topic 1</span>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            Biodiversity & Populations Exam Reviewer
+          </h1>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto pb-1 sm:pb-0" id="main-nav">
+        <button data-tab="flashcards" class="nav-btn active px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-emerald-600 text-white shadow-sm">
+          <span>🃏</span> Flip Cards
+        </button>
+        <button data-tab="ai-tutor" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-slate-800/60 hover:bg-slate-700/80 text-slate-200 hover:text-white">
+          <span>🤖</span> AI Reviewer
+        </button>
+        <button data-tab="calculators" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-slate-800/60 hover:bg-slate-700/80 text-slate-200 hover:text-white">
+          <span>🧮</span> Bio Calculators
+        </button>
+        <button data-tab="practice-exam" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-slate-800/60 hover:bg-slate-700/80 text-slate-200 hover:text-white">
+          <span>📝</span> Practice Exam
+        </button>
+        <button data-tab="reference" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-slate-800/60 hover:bg-slate-700/80 text-slate-200 hover:text-white">
+          <span>📚</span> Syllabus Sheet
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: FLIP CARDS (FLASHCARD REVIEWER) -->
+    <!-- ========================================== -->
+    <div id="section-flashcards" class="tab-pane space-y-6">
+      
+      <!-- Subtopic Filter & Stats Bar -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Active Deck</span>
+            <span class="text-xs text-slate-500" id="card-stats-text">Showing 42 Cards</span>
+          </div>
+          <h2 class="text-xl font-bold text-slate-800">QCAA Topic 1 Flashcard Mastery</h2>
+          <p class="text-xs sm:text-sm text-slate-500">Click card or press <kbd class="px-1.5 py-0.5 text-xs bg-slate-100 border border-slate-300 rounded font-mono">Space</kbd> to flip. Use <kbd class="px-1.5 py-0.5 text-xs bg-slate-100 border border-slate-300 rounded font-mono">←</kbd> <kbd class="px-1.5 py-0.5 text-xs bg-slate-100 border border-slate-300 rounded font-mono">→</kbd> keys to navigate.</p>
+        </div>
+
+        <!-- Progress Tracking -->
+        <div class="flex items-center gap-4 bg-slate-50 p-3 rounded-xl border border-slate-200 min-w-[260px]">
+          <div class="flex-1">
+            <div class="flex justify-between text-xs font-semibold mb-1">
+              <span class="text-slate-600">Mastery Progress</span>
+              <span id="mastery-percent" class="text-emerald-700">0%</span>
+            </div>
+            <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+              <div id="mastery-bar" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
+            </div>
+            <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+              <span id="mastered-count">0 Mastered</span>
+              <span id="remaining-count">42 Remaining</span>
+            </div>
+          </div>
+          <button id="btn-reset-deck" title="Reset all mastery flags" class="text-xs text-slate-500 hover:text-rose-600 p-1.5 rounded hover:bg-white transition-colors border border-transparent hover:border-slate-200">
+            🔄 Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2" id="card-filters">
+        <button data-cat="all" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-emerald-600 text-white shadow-sm whitespace-nowrap">
+          All Cards (42)
+        </button>
+        <button data-cat="unmastered" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          ⚠️ Needs Review
+        </button>
+        <button data-cat="biodiv" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          🌿 Biodiversity & Species
+        </button>
+        <button data-cat="class" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          🗂️ Taxa & Keys
+        </button>
+        <button data-cat="math" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          📐 Lincoln & Simpson Math
+        </button>
+        <button data-cat="sampling" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          📍 Sampling & Bias
+        </button>
+        <button data-cat="factors" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          ☀️ Abiotic & Biotic Factors
+        </button>
+        <button data-cat="pop" class="cat-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all bg-slate-200 text-slate-700 hover:bg-slate-300 whitespace-nowrap">
+          📈 Population & r/K
+        </button>
+      </div>
+
+      <!-- Main Flashcard Viewer Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: The Interactive Flip Card -->
+        <div class="lg:col-span-8 flex flex-col items-center">
+          
+          <!-- Card Action Header -->
+          <div class="w-full max-w-2xl flex items-center justify-between text-xs text-slate-500 mb-2 px-1">
+            <span id="card-counter" class="font-semibold text-slate-700">Card 1 of 42</span>
+            <div class="flex items-center gap-2">
+              <span id="card-category-badge" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-medium">Biodiversity</span>
+              <button id="btn-shuffle" class="flex items-center gap-1 hover:text-emerald-700 font-medium">
+                🔀 Shuffle Deck
+              </button>
+            </div>
+          </div>
+
+          <!-- Flip Card Container -->
+          <div id="flashcard-scene" class="w-full max-w-2xl h-[380px] sm:h-[420px] perspective-1000 cursor-pointer group select-none">
+            <div id="flashcard-inner" class="relative w-full h-full transform-style-3d transition-transform duration-500 rounded-3xl shadow-xl">
+              
+              <!-- Front Side -->
+              <div id="card-front" class="absolute inset-0 w-full h-full backface-hidden bg-gradient-to-br from-white to-slate-50 border-2 border-emerald-500/20 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-lg">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-700" id="card-front-type">QCAA Question / Concept</span>
+                  </div>
+                  <span class="text-xs font-mono text-slate-400 bg-slate-100 px-2 py-1 rounded-md">CLICK TO FLIP 🔄</span>
+                </div>
+
+                <div class="my-auto text-center px-2 sm:px-6">
+                  <span id="card-front-verb" class="inline-block text-xs font-bold uppercase tracking-wide bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-full mb-3">Cognitive Verb</span>
+                  <h3 id="card-front-text" class="text-xl sm:text-2xl font-bold text-slate-800 leading-snug">
+                    Question text will appear here.
+                  </h3>
+                  <p id="card-front-hint" class="text-xs text-slate-400 mt-3 italic">
+                    Think of the key syllabus definitions and criteria before flipping.
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-100 pt-3">
+                  <span id="card-textbook-ref">Textbook Lesson 2.1 (pg 69-72)</span>
+                  <span class="text-emerald-600 font-semibold group-hover:underline flex items-center gap-1">
+                    Show Answer & Criteria ↵
+                  </span>
+                </div>
+              </div>
+
+              <!-- Back Side -->
+              <div id="card-back" class="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br from-slate-900 via-slate-850 to-teal-950 text-white border-2 border-emerald-400/30 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-y-auto">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                    ✅ QCAA Marking Key & Explanation
+                  </span>
+                  <span class="text-xs font-mono text-slate-400 bg-slate-800 px-2 py-1 rounded-md">CLICK TO FLIP BACK</span>
+                </div>
+
+                <div class="my-auto py-2">
+                  <h4 id="card-back-title" class="text-sm font-semibold text-emerald-300 mb-2 border-b border-emerald-900/60 pb-1">
+                    Detailed Syllabus Answer:
+                  </h4>
+                  <div id="card-back-text" class="text-sm sm:text-base text-slate-200 space-y-2 leading-relaxed">
+                    Answer criteria will appear here.
+                  </div>
+                  <div id="card-back-keypoints" class="mt-3 p-3 bg-slate-800/80 rounded-xl border border-emerald-500/20 text-xs text-emerald-200">
+                    <!-- Key QCAA points / formulas -->
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800 pt-3">
+                  <span id="card-back-tip" class="text-amber-300">💡 Exam Tip: Check units and specific criteria</span>
+                  <span class="text-slate-300">Spacebar to flip</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Card Controls (Previous, Next, Mark as Mastered) -->
+          <div class="w-full max-w-2xl mt-4 flex items-center justify-between gap-3">
+            <button id="btn-prev-card" class="flex-1 py-2.5 px-4 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl font-semibold text-sm text-slate-700 shadow-sm transition-all flex items-center justify-center gap-1.5">
+              <span>←</span> Previous
+            </button>
+            
+            <button id="btn-toggle-mastered" class="flex-1 py-2.5 px-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl font-semibold text-sm shadow-sm transition-all flex items-center justify-center gap-1.5">
+              <span id="mastered-icon">⭐</span> <span id="mastered-label">Mark as Mastered</span>
+            </button>
+
+            <button id="btn-next-card" class="flex-1 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-semibold text-sm shadow-sm transition-all flex items-center justify-center gap-1.5">
+              Next <span>→</span>
+            </button>
+          </div>
+
+          <!-- Flip Button Alternative for Mobile -->
+          <button id="btn-flip-card" class="mt-2 text-xs font-semibold text-slate-500 hover:text-emerald-700 py-1 px-3 rounded-lg hover:bg-slate-100 transition-colors">
+            Tap to Flip Card (or Spacebar)
+          </button>
+        </div>
+
+        <!-- Right: Fast Topic Deck Navigator & Quick Reference -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-bold text-slate-800 uppercase tracking-wider mb-3 flex items-center justify-between">
+              <span>Card Navigator</span>
+              <span class="text-xs font-normal text-slate-500" id="deck-list-count">42 items</span>
+            </h3>
+            
+            <div class="max-h-[380px] overflow-y-auto pr-1 space-y-1.5 text-xs" id="cards-quick-list">
+              <!-- Dynamically populated list of cards -->
+            </div>
+          </div>
+
+          <!-- Cognitive Verb QCAA Reminder -->
+          <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-4 border border-amber-200 text-xs text-amber-900 space-y-2">
+            <div class="font-bold flex items-center gap-1.5 text-amber-800">
+              <span>🎯</span> QCAA External Exam Verbs
+            </div>
+            <p><strong>Identify:</strong> Recognize and name specific features or taxa (e.g. Linnaean levels).</p>
+            <p><strong>Describe:</strong> Give an account or characteristics of (e.g. biological species concept, sampling techniques).</p>
+            <p><strong>Explain:</strong> Give reasons, cause-and-effect mechanisms (e.g. why 'trap-happy' underrepresents population).</p>
+            <p><strong>Calculate / Determine:</strong> Use given formulas ($SDI$, Lincoln index $N$, growth rate $r$).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: BUILT-IN AI REVIEWER & COACH    -->
+    <!-- ========================================== -->
+    <div id="section-ai-tutor" class="tab-pane hidden space-y-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left: AI Reviewer Chat & Exam Marking Interface -->
+        <div class="lg:col-span-8 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[650px] overflow-hidden">
+          
+          <!-- AI Reviewer Header -->
+          <div class="p-4 bg-gradient-to-r from-slate-900 via-teal-950 to-emerald-950 text-white flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 font-bold text-lg">
+                🤖
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-sm text-white">Gemini Bio-Examiner</h3>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-400/20 text-emerald-300 border border-emerald-400/30">
+                    Unit 3 Topic 1 Engine Active
+                  </span>
+                </div>
+                <p class="text-xs text-slate-300">QCAA Syllabus Alignment • Instant Rubric Assessment & Explanations</p>
+              </div>
+            </div>
+
+            <!-- Mode Selector inside Tutor -->
+            <div class="flex items-center gap-1 bg-slate-800/80 p-1 rounded-lg border border-slate-700">
+              <button id="tutor-mode-chat" class="tutor-mode-btn active px-2.5 py-1 text-xs font-semibold rounded-md bg-emerald-600 text-white shadow-sm">
+                Q&A Coach
+              </button>
+              <button id="tutor-mode-drill" class="tutor-mode-btn px-2.5 py-1 text-xs font-semibold rounded-md text-slate-300 hover:text-white">
+                Exam Drill
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat Messages Container -->
+          <div id="ai-chat-messages" class="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4 bg-slate-50/50">
+            
+            <!-- Bot Welcome Message -->
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
+                🤖
+              </div>
+              <div class="bg-white border border-slate-200/80 rounded-2xl rounded-tl-sm p-4 text-xs sm:text-sm text-slate-800 shadow-sm max-w-xl space-y-2">
+                <p class="font-semibold text-emerald-800">G'day! I'm your QCAA Biology External Exam Reviewer.</p>
+                <p>I'm equipped with all syllabus concepts, definitions, formulas, and marking criteria from the Unit 3 Topic 1 Overview (Biodiversity and Populations).</p>
+                <p>You can:</p>
+                <ul class="list-disc pl-4 space-y-1 text-slate-600">
+                  <li>Ask me to explain any syllabus concept or formula (e.g. <em>"Why does trap-happy cause underestimation?"</em>, <em>"Explain Specht's system"</em>).</li>
+                  <li>Switch to <strong>Exam Drill</strong> to practice writing real QCAA short response answers with instant marking!</li>
+                  <li>Click any prompt chip below for rapid review.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Suggested Prompt Pills -->
+          <div class="px-4 py-2 bg-white border-t border-slate-100 flex items-center gap-1.5 overflow-x-auto text-[11px]" id="prompt-pills">
+            <span class="text-slate-400 font-semibold uppercase shrink-0">Try:</span>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              Why does 'trap-happy' lead to underestimation?
+            </button>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              Explain 5 limitations of Biological Species Concept
+            </button>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              How do I calculate Simpson's Diversity Index?
+            </button>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              Compare r- and K-strategists
+            </button>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              How does Specht's classification work?
+            </button>
+            <button class="prompt-pill px-2.5 py-1 bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-600 rounded-full border border-slate-200 whitespace-nowrap transition-colors">
+              Stratified vs Systematic sampling
+            </button>
+          </div>
+
+          <!-- Chat Input Area -->
+          <form id="ai-chat-form" class="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+            <input type="text" id="ai-chat-input" placeholder="Ask a question about Unit 3 Topic 1 (or type an answer)..." class="flex-1 px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all">
+            <button type="submit" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm">
+              <span>Send</span>
+              <span>🚀</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Right: QCAA Exam Drill Panel & Exam Tips -->
+        <div class="lg:col-span-4 space-y-4">
+          
+          <!-- Exam Drill Scenario Box -->
+          <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded">Exam Drill Mode</span>
+              <span id="drill-marks-badge" class="text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">[3 Marks]</span>
+            </div>
+            
+            <h4 class="font-bold text-slate-800 text-sm" id="drill-question-title">Practice QCAA Scenario</h4>
+            <p class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-3 rounded-xl border border-slate-100" id="drill-question-text">
+              "A population of bilbies was sampled in the Simpson Desert using capture-recapture. In the first capture, 40 bilbies were tagged. In the second capture, 35 were trapped, of which 7 were tagged. <strong>Calculate</strong> the estimated population size, and <strong>explain</strong> how tag shedding would impact the validity of this estimate."
+            </p>
+
+            <button id="btn-load-drill" class="w-full py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-xl shadow-sm transition-all flex items-center justify-center gap-1.5">
+              <span>🎯 Attempt This in Coach</span>
+            </button>
+
+            <button id="btn-next-drill" class="w-full py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-medium rounded-xl transition-all">
+              Load Different Scenario 🔄
+            </button>
+          </div>
+
+          <!-- Live Gemini API Key Config (Optional) -->
+          <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm text-xs space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-700 flex items-center gap-1">⚙️ Custom Gemini API Key</span>
+              <span class="text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded font-medium">Optional</span>
+            </div>
+            <p class="text-slate-500 text-[11px]">The built-in reviewer runs 100% offline with full syllabus knowledge. You can optionally paste a Google Gemini API key for dynamic open conversational responses.</p>
+            <div class="flex gap-1.5">
+              <input type="password" id="gemini-api-key" value="" placeholder="Paste AQ... or AIza... key (or leave blank)" class="flex-1 px-2.5 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-emerald-500">
+              <button id="btn-save-key" class="px-2.5 py-1.5 bg-slate-800 text-white rounded-lg font-medium hover:bg-slate-700">Save</button>
+              <button id="btn-clear-key" class="px-2 py-1.5 bg-slate-100 text-slate-600 rounded-lg font-medium hover:bg-slate-200" title="Clear API key and use built-in QCAA engine">Clear</button>
+            </div>
+            <p id="key-status" class="text-[10px] text-slate-400">Status: Using embedded QCAA Syllabus Knowledge Engine</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: BIO CALCULATORS & WORKBENCHES   -->
+    <!-- ========================================== -->
+    <div id="section-calculators" class="tab-pane hidden space-y-6">
+      
+      <!-- Calculator Tabs -->
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-3">
+        <button id="calc-tab-lincoln" class="calc-tab-btn active px-4 py-2 rounded-xl text-sm font-bold bg-emerald-600 text-white shadow-sm">
+          Lincoln Index ($N = \frac{M \times n}{m}$)
+        </button>
+        <button id="calc-tab-simpson" class="calc-tab-btn px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300">
+          Simpson's Diversity Index ($SDI$)
+        </button>
+        <button id="calc-tab-growth" class="calc-tab-btn px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300">
+          Population Growth Rate ($r$)
+        </button>
+      </div>
+
+      <!-- WORKBENCH 1: LINCOLN INDEX -->
+      <div id="calc-panel-lincoln" class="calc-panel space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- Inputs & Calculation Breakdown -->
+          <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Capture-Recapture Estimator</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Lincoln Index Workbench</h3>
+              <p class="text-xs text-slate-500">Calculate total population size $N$ using capture-recapture and test common experimental biases.</p>
+            </div>
+
+            <!-- Inputs Grid -->
+            <div class="grid grid-cols-3 gap-4">
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <label class="block text-xs font-bold text-slate-700 mb-1">M (Initial Marked)</label>
+                <input type="number" id="input-M" value="50" min="1" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-800">
+                <span class="text-[10px] text-slate-400">Captured, marked & released</span>
+              </div>
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <label class="block text-xs font-bold text-slate-700 mb-1">n (2nd Total Catch)</label>
+                <input type="number" id="input-n" value="60" min="1" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-800">
+                <span class="text-[10px] text-slate-400">Total in second capture</span>
+              </div>
+              <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                <label class="block text-xs font-bold text-slate-700 mb-1">m (2nd Marked Catch)</label>
+                <input type="number" id="input-m" value="10" min="1" class="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm font-bold text-slate-800">
+                <span class="text-[10px] text-slate-400">Recaptured with marks</span>
+              </div>
+            </div>
+
+            <!-- Bias Simulator Buttons -->
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-slate-700 flex items-center gap-1">
+                🧪 Test Real-World Field Biases on $N$:
+              </span>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button id="bias-normal" class="bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-emerald-50 text-emerald-800 border-emerald-400">
+                  Normal Baseline
+                </button>
+                <button id="bias-happy" class="bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50">
+                  🍖 "Trap-Happy" (+m)
+                </button>
+                <button id="bias-shy" class="bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50">
+                  😨 "Trap-Shy" (-m)
+                </button>
+                <button id="bias-tagloss" class="bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50">
+                  🏷️ Tag Shedding (-m)
+                </button>
+              </div>
+            </div>
+
+            <!-- Mathematical Output Card -->
+            <div class="bg-gradient-to-br from-slate-900 to-emerald-950 text-white p-5 rounded-xl border border-emerald-500/30 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="text-xs uppercase font-mono text-emerald-400">Lincoln Formula Step-by-Step</span>
+                <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">QCAA Standard</span>
+              </div>
+              <div class="mono text-base text-slate-300">
+                N = (M × n) / m = (<span id="out-M" class="text-emerald-400 font-bold">50</span> × <span id="out-n" class="text-emerald-400 font-bold">60</span>) / <span id="out-m" class="text-emerald-400 font-bold">10</span>
+              </div>
+              <div class="flex items-baseline gap-3 pt-1 border-t border-slate-800">
+                <span class="text-xs text-slate-400">Estimated Population Size (N):</span>
+                <span id="lincoln-result" class="text-3xl font-extrabold text-emerald-400">300</span>
+                <span class="text-xs text-slate-400">organisms</span>
+              </div>
+              <div id="bias-explanation" class="text-xs text-amber-200 bg-slate-800/60 p-2.5 rounded-lg border border-amber-500/20">
+                Normal estimation without simulated behavioural skew.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Lincoln Index 8-Step Protocol Checklist -->
+          <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <h4 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+              <span>📋</span> Lincoln Index: 8 Mandatory Steps
+            </h4>
+            <ol class="text-xs text-slate-600 space-y-2.5 pl-5 list-decimal">
+              <li><strong>Determine focus organism:</strong> Set trap for organisms in suitable habitat.</li>
+              <li><strong>Time duration:</strong> When identified time has passed, collect trapped specimens.</li>
+              <li><strong>Mark specimens:</strong> Count trapped organisms, mark with appropriate method (tagging, marks on shell, dusting with colour).</li>
+              <li><strong>Release:</strong> Release marked organisms back into habitat. Wait for identified dispersion time to pass.</li>
+              <li><strong>Reset trap:</strong> Set trap again in identical habitat conditions.</li>
+              <li><strong>Second collection:</strong> When identified time has passed, collect trapped specimens.</li>
+              <li><strong>Count specimens:</strong> Count total trapped ($n$) and count marked specimens in trap ($m$).</li>
+              <li><strong>Estimate:</strong> Use Lincoln index formula $N = \frac{M \times n}{m}$.</li>
+            </ol>
+            <div class="p-3 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800">
+              <strong>⚠️ Critical QCAA Exam Rule:</strong> Only relies on living organisms! If a marked organism dies, $m$ decreases, skewing data to <strong>overrepresent</strong> population size.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WORKBENCH 2: SIMPSON'S DIVERSITY INDEX -->
+      <div id="calc-panel-simpson" class="calc-panel hidden space-y-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-2 py-0.5 rounded">Biodiversity Quantification</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Simpson's Diversity Index (SDI) Table Workbench</h3>
+              <p class="text-xs text-slate-500">Formula: $SDI = 1 - \left(\frac{\sum n(n-1)}{N(N-1)}\right)$. Enter species abundance to calculate step-by-step.</p>
+            </div>
+            <!-- Presets -->
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-bold text-slate-500">Presets:</span>
+              <button id="sdi-preset-rainforest" class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded-lg transition-colors">Rainforest (High)</button>
+              <button id="sdi-preset-monoculture" class="px-2.5 py-1 text-xs font-semibold bg-amber-100 text-amber-800 hover:bg-amber-200 rounded-lg transition-colors">Monoculture (Low)</button>
+              <button id="sdi-preset-anomaly" class="px-2.5 py-1 text-xs font-semibold bg-rose-100 text-rose-800 hover:bg-rose-200 rounded-lg transition-colors" title="Test the Page 7 textbook anomaly!">Page 7 Anomaly</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Species Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border border-slate-200 rounded-xl overflow-hidden" id="sdi-table">
+              <thead class="bg-slate-100 text-slate-700 uppercase font-semibold">
+                <tr>
+                  <th class="p-3">Species Name / Code</th>
+                  <th class="p-3">Count (n)</th>
+                  <th class="p-3">n - 1</th>
+                  <th class="p-3">n(n - 1)</th>
+                  <th class="p-3 text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody id="sdi-table-body" class="divide-y divide-slate-200 bg-white">
+                <!-- Rows injected dynamically -->
+              </tbody>
+              <tfoot class="bg-slate-50 font-bold text-slate-800">
+                <tr>
+                  <td class="p-3">TOTALS</td>
+                  <td class="p-3 text-emerald-700" id="sdi-total-N">N = 0</td>
+                  <td class="p-3" id="sdi-total-Nminus1">N - 1 = 0</td>
+                  <td class="p-3 text-teal-700" id="sdi-total-sum">Σ n(n-1) = 0</td>
+                  <td class="p-3 text-center">
+                    <button id="btn-add-species" class="px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-xs font-semibold">
+                      + Add Species
+                    </button>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- Calculation Result Banner -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-900 text-white rounded-xl space-y-1">
+              <span class="text-xs text-slate-400">Denominator N(N-1)</span>
+              <div class="text-2xl font-bold mono text-emerald-400" id="sdi-calc-den">0</div>
+              <p class="text-[10px] text-slate-400">Total pairwise combinations</p>
+            </div>
+            <div class="p-4 bg-slate-900 text-white rounded-xl space-y-1">
+              <span class="text-xs text-slate-400">Probability Ratio Σ/N(N-1)</span>
+              <div class="text-2xl font-bold mono text-teal-400" id="sdi-calc-ratio">0.000</div>
+              <p class="text-[10px] text-slate-400">Chance 2 random are SAME species</p>
+            </div>
+            <div class="p-4 bg-gradient-to-r from-emerald-800 to-teal-900 text-white rounded-xl space-y-1">
+              <span class="text-xs text-emerald-200 font-bold uppercase">Simpson's Diversity Index (SDI)</span>
+              <div class="text-3xl font-extrabold mono text-white" id="sdi-calc-final">0.000</div>
+              <p class="text-[10px] text-emerald-200">Scale: 0 (No diversity) to 1.0 (High)</p>
+            </div>
+          </div>
+
+          <!-- SDI Biological Interpretation & Anomaly Alert -->
+          <div id="sdi-warning-banner" class="hidden p-4 bg-rose-50 border border-rose-200 rounded-xl text-xs text-rose-800 space-y-1">
+            <div class="font-bold flex items-center gap-1.5">
+              <span>⚠️</span> Bradshaw Overview Page 7 Anomaly Detected!
+            </div>
+            <p>You have only 2 individuals total across 2 species ($N=2, s=2$). Mathematically, $\sum n(n-1) = 0$, producing $SDI = 1 - (0/2) = 1.0$. This is biologically <strong>erroneous</strong>: the habitat has near-zero biodiversity in reality, but the index registers maximum diversity due to microscopic sample size!</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WORKBENCH 3: POPULATION GROWTH & R/K SIMULATOR -->
+      <div id="calc-panel-growth" class="calc-panel hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          <!-- Parameters & Growth Formula -->
+          <div class="lg:col-span-5 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-2 py-0.5 rounded">Population Mathematics</span>
+              <h3 class="text-lg font-bold text-slate-800 mt-1">Growth Rate Calculator</h3>
+              <p class="text-xs text-slate-500">Formula: $r = (b + i) - (d + e)$</p>
+            </div>
+
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                  <span>Births (b)</span>
+                  <span id="val-b" class="text-emerald-700">120</span>
+                </div>
+                <input type="range" id="range-b" min="0" max="300" value="120" class="w-full accent-emerald-600">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                  <span>Immigration (i)</span>
+                  <span id="val-i" class="text-emerald-700">30</span>
+                </div>
+                <input type="range" id="range-i" min="0" max="100" value="30" class="w-full accent-emerald-600">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                  <span>Deaths (d)</span>
+                  <span id="val-d" class="text-rose-700">80</span>
+                </div>
+                <input type="range" id="range-d" min="0" max="300" value="80" class="w-full accent-rose-600">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                  <span>Emigration (e)</span>
+                  <span id="val-e" class="text-rose-700">20</span>
+                </div>
+                <input type="range" id="range-e" min="0" max="100" value="20" class="w-full accent-rose-600">
+              </div>
+
+              <div class="pt-2 border-t border-slate-200">
+                <div class="flex justify-between text-xs font-bold text-slate-700 mb-1">
+                  <span>Carrying Capacity (K)</span>
+                  <span id="val-K" class="text-indigo-700">500</span>
+                </div>
+                <input type="range" id="range-K" min="100" max="1000" step="50" value="500" class="w-full accent-indigo-600">
+              </div>
+            </div>
+
+            <div class="p-4 bg-slate-900 text-white rounded-xl space-y-2">
+              <div class="text-xs text-slate-400">Net Population Growth Rate ($r$):</div>
+              <div class="text-3xl font-extrabold mono text-emerald-400" id="growth-r-result">+50</div>
+              <div class="text-[11px] text-slate-300">
+                $(b + i) - (d + e) = (120 + 30) - (80 + 20) = 150 - 100 = +50$ organisms/year
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Chart (J-Curve vs S-Curve) -->
+          <div class="lg:col-span-7 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="font-bold text-slate-800 text-sm">Growth Curves: J-Curve vs S-Curve</h4>
+                <p class="text-xs text-slate-500">Exponential (r-selected) vs Logistic (K-selected) Growth</p>
+              </div>
+              <div class="flex items-center gap-1.5 text-xs">
+                <button id="curve-toggle-both" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded font-semibold text-slate-700">Both</button>
+                <button id="curve-toggle-j" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded font-semibold text-slate-700">J-Curve Only</button>
+                <button id="curve-toggle-s" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded font-semibold text-slate-700">S-Curve Only</button>
+              </div>
+            </div>
+
+            <!-- Fixed Height Chart Container -->
+            <div class="relative h-72 w-full">
+              <canvas id="growthChart"></canvas>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl">
+                <strong class="text-blue-900 block mb-1">Exponential Growth (J-Curve)</strong>
+                <p class="text-blue-800">No limiting factors. Common in $r$-selected species (e.g. bacteria, weeds) until sudden resource collapse.</p>
+              </div>
+              <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-xl">
+                <strong class="text-indigo-900 block mb-1">Logistic Growth (S-Curve)</strong>
+                <p class="text-indigo-800">Growth rate decelerates as density increases, plateauing at carrying capacity ($K$). Common in $K$-selected species.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4: PRACTICE EXAM (QCAA STYLE)     -->
+    <!-- ========================================== -->
+    <div id="section-practice-exam" class="tab-pane hidden space-y-6">
+      
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded">Mock External Exam</span>
+          <h2 class="text-xl font-bold text-slate-800 mt-1">QCAA Senior Biology Unit 3 Topic 1 Practice Exam</h2>
+          <p class="text-xs sm:text-sm text-slate-500">20 Multiple Choice Questions randomly drawn from the QCAA question bank (re-shuffled every try/reset).</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="btn-submit-exam" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm shadow-sm transition-all">
+            Submit & Grade Exam
+          </button>
+          <button id="btn-reset-exam" class="px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-semibold text-sm transition-all">
+            Reset
+          </button>
+        </div>
+      </div>
+
+      <!-- Exam Questions List -->
+      <div class="space-y-4" id="exam-questions-container">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Bottom Exam Action Buttons (Reset and Submit) -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-6">
+        <div class="text-xs text-slate-500">
+          Finished all 20 questions? Check your answers before submitting for grading.
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="btn-submit-exam-bottom" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-sm shadow-sm transition-all flex items-center gap-1.5">
+            <span>Submit & Grade Exam</span>
+            <span>📊</span>
+          </button>
+          <button id="btn-reset-exam-bottom" class="px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-semibold text-sm transition-all flex items-center gap-1.5">
+            <span>🔄</span>
+            <span>Reset / New Random 20 Questions</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Exam Score Card Modal / Banner -->
+      <div id="exam-results-banner" class="hidden p-6 bg-slate-900 text-white rounded-2xl shadow-xl space-y-4 border border-emerald-500/30">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <span>📊</span> Your Exam Score Summary
+          </h3>
+          <span id="exam-score-percentage" class="text-2xl font-extrabold text-emerald-400">0%</span>
+        </div>
+        <p id="exam-score-comment" class="text-sm text-slate-300">Detailed feedback on each question is shown above.</p>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 5: SYLLABUS SHEET & REFERENCE      -->
+    <!-- ========================================== -->
+    <div id="section-reference" class="tab-pane hidden space-y-6">
+      
+      <!-- Key Formulas Card -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">📐</span>
+          <h3 class="text-lg font-bold text-slate-800">QCAA Biology Unit 3 Topic 1 Formula Master Sheet</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+          
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Lincoln Index (Capture-Recapture)</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-emerald-800 font-bold text-center">
+              N = (M × n) / m
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li><strong>N:</strong> Estimated population size</li>
+              <li><strong>M:</strong> Number marked in 1st capture</li>
+              <li><strong>n:</strong> Total caught in 2nd capture</li>
+              <li><strong>m:</strong> Number marked in 2nd capture</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Simpson's Diversity Index (SDI)</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-teal-800 font-bold text-center">
+              SDI = 1 - [ Σ n(n - 1) / N(N - 1) ]
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li><strong>n:</strong> Organisms of a single species</li>
+              <li><strong>N:</strong> Total organisms of all species</li>
+              <li><strong>Σ:</strong> Sum of values</li>
+              <li>Values close to 1 = high diversity</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Population Growth Rate (r)</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-blue-800 font-bold text-center">
+              r = (b + i) - (d + e)
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li><strong>b:</strong> Births / hatched</li>
+              <li><strong>i:</strong> Immigrated in</li>
+              <li><strong>d:</strong> Deaths</li>
+              <li><strong>e:</strong> Emigrated out</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Species Richness (Menhinick Index)</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-purple-800 font-bold text-center">
+              S = s / √N
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li><strong>S:</strong> Richness index value</li>
+              <li><strong>s:</strong> Number of unique species</li>
+              <li><strong>N:</strong> Total organisms sampled</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Relative Abundance (Evenness)</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-amber-800 font-bold text-center">
+              RA = (TS / TP) × 100
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li><strong>RA:</strong> Relative abundance (%)</li>
+              <li><strong>TS:</strong> Total organisms for 1 species</li>
+              <li><strong>TP:</strong> Total organisms in ecosystem</li>
+            </ul>
+          </div>
+
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+            <span class="font-bold text-slate-800 block text-sm">Percentage Frequency</span>
+            <div class="mono bg-white p-2 rounded border border-slate-300 text-indigo-800 font-bold text-center">
+              PF = (Sites Present / Total Sites) × 100
+            </div>
+            <ul class="text-slate-600 space-y-1">
+              <li>Assesses how widely dispersed a species is</li>
+              <li>Commonly measured with quadrats</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Specht's & Holdridge Classification Breakdown -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Ecosystem Classification</span>
+          <h4 class="font-bold text-slate-800 text-base">Specht's Classification System</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Classifies Australian plant communities based on two distinct structural criteria:
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <strong class="text-slate-800">1. Growth Form of Tallest Stratum:</strong>
+              <p class="text-slate-600">Trees > 30m, Trees 10–30m, Trees < 10m, Shrubs > 2m, Shrubs < 2m, Hummock grasses, Tussock grasses, Herbs.</p>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <strong class="text-slate-800">2. Foliage Projective Cover (% of ground shaded):</strong>
+              <p class="text-slate-600">• Dense (70–100%)<br>• Mid-dense (30–70%)<br>• Sparse (10–30%)<br>• Very sparse (< 10%)</p>
+            </div>
+            <p class="text-xs text-emerald-700 font-semibold">Example: Tall trees (10-30m) with 30-70% cover = <em>Open Forest</em>.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-2 py-0.5 rounded">Global Bioclimatic System</span>
+          <h4 class="font-bold text-slate-800 text-base">Holdridge Life Zone Scheme</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            A global bioclimatic classification scheme based on three empirical climatic axes:
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <strong class="text-slate-800">1. Annual Precipitation:</strong>
+              <p class="text-slate-600">Total yearly rainfall (in mm, logarithmic scale).</p>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <strong class="text-slate-800">2. Mean Annual Biotemperature:</strong>
+              <p class="text-slate-600">Mean of unit temperatures between 0°C and 30°C (temperatures below 0°C count as 0°C as growth ceases).</p>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+              <strong class="text-slate-800">3. Potential Evapotranspiration Ratio (PET):</strong>
+              <p class="text-slate-600">Ratio of annual potential evapotranspiration to mean annual precipitation.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- r-strategists vs K-strategists Comparison Table -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <h4 class="font-bold text-slate-800 text-base">Comparison: r-Strategists vs K-Strategists</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left border border-slate-200 rounded-xl overflow-hidden">
+            <thead class="bg-slate-100 uppercase text-slate-700 font-semibold">
+              <tr>
+                <th class="p-3">Trait / Characteristic</th>
+                <th class="p-3 bg-blue-50 text-blue-900">r-Strategists (Opportunistic)</th>
+                <th class="p-3 bg-emerald-50 text-emerald-900">K-Strategists (Equilibrium)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr>
+                <td class="p-3 font-semibold">Lifespan</td>
+                <td class="p-3">Short lifespans (typically)</td>
+                <td class="p-3">Long lifespans</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Body Size</td>
+                <td class="p-3">Smaller in size</td>
+                <td class="p-3">Larger sizes (generally)</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Maturation & Reproduction Age</td>
+                <td class="p-3">Fast maturation; early reproductive ages</td>
+                <td class="p-3">Slow maturation; later reproductive ages</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Number of Offspring</td>
+                <td class="p-3">Many offspring per clutch/litter</td>
+                <td class="p-3">Few offspring at a time</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Parental Investment & Care</td>
+                <td class="p-3">Low levels of care for offspring</td>
+                <td class="p-3">High levels of parental care</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Competition Ability</td>
+                <td class="p-3">Not competitive for resources</td>
+                <td class="p-3">Highly competitive for resources</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Typical Environment</td>
+                <td class="p-3">Unstable, pioneer, disturbed ecosystems</td>
+                <td class="p-3">Stable, climax ecosystems at carrying capacity</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold">Growth Curve</td>
+                <td class="p-3 font-mono text-blue-700">J-Curve (Exponential growth)</td>
+                <td class="p-3 font-mono text-emerald-700">S-Curve (Logistic growth to K)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-xs mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+      <div>
+        <p class="font-semibold text-slate-300">QCAA Senior Biology Unit 3 Topic 1: Biodiversity & Populations Exam Reviewer</p>
+        <p class="text-slate-500 mt-0.5">Aligned with Queensland Curriculum & Assessment Authority (QCAA) External Assessment Standards.</p>
+      </div>
+      <div class="text-slate-500">
+        Standalone Local Web Application • Flip Cards • Built-in AI Tutor • Math Workbenches
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT APPLICATION LOGIC               -->
+  <!-- ========================================== -->
+  <script>
+    // --- 1. Comprehensive Flashcard Deck (42 QCAA Syllabus Cards) ---
+    const FLASHCARDS = [
+      {
+        id: 1,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'Describe Genetic Diversity and state its significance.',
+        hint: 'Variation within a single species.',
+        back: '<strong>Genetic Diversity</strong> refers to the variation of genes, between organisms, within a species.<br><br><em>Significance:</em> Provides the raw material for adaptation and evolution, increasing population resilience against environmental fluctuations or disease.',
+        keypoints: 'Variation of genes • Between organisms • Within a species • Promotes adaptive resilience',
+        ref: 'Textbook Lesson 2.1 (pg 69-72)'
+      },
+      {
+        id: 2,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'Describe Species Diversity and identify its two main components.',
+        hint: 'Types and abundance within an ecosystem.',
+        back: '<strong>Species Diversity</strong> refers to the variation in types (richness) and amount/abundance (evenness) of species within an ecosystem.<br><br>It accounts for both how many different species exist and how evenly individuals are distributed among them.',
+        keypoints: 'Variation in types (richness) • Variation in amount (abundance/evenness) • Within an ecosystem',
+        ref: 'Textbook Lesson 2.1 (pg 69-72)'
+      },
+      {
+        id: 3,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'Describe Ecosystem Diversity.',
+        hint: 'Variation across landscapes.',
+        back: '<strong>Ecosystem Diversity</strong> refers to the variation of habitats, communities, and ecological processes that occur between and within ecosystems.',
+        keypoints: 'Variation of habitats • Communities • Biological and geochemical processes between ecosystems',
+        ref: 'Textbook Lesson 2.1 (pg 69-72)'
+      },
+      {
+        id: 4,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'State the Biological Species Concept.',
+        hint: 'Interbreeding, viable, fertile.',
+        back: 'A <strong>species</strong> is a group of similar organisms that are able to interbreed and produce <strong>viable, fertile offspring</strong>.<br><br>• <em>Viable:</em> Living / capable of surviving.<br>• <em>Fertile:</em> Capable of breeding and reproducing.',
+        keypoints: 'Similar organisms • Interbreed in nature • Viable (living) • Fertile (able to reproduce)',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 5,
+        cat: 'biodiv',
+        verb: 'Explain',
+        front: 'Why are Fossils and Extinct Organisms a limitation of the Biological Species Concept?',
+        hint: 'Can dead organisms interbreed?',
+        back: 'Organisms in the fossil record or extinct species are dead; their reproductive capability and mating behaviour cannot be directly observed or tested. Therefore, whether they produced viable, fertile offspring cannot be verified.',
+        keypoints: 'Fossilized/dead organisms • Cannot test interbreeding • Cannot test offspring fertility',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 6,
+        cat: 'biodiv',
+        verb: 'Explain',
+        front: 'Why is Asexual Reproduction (and Apomixis) a limitation of the Biological Species Concept?',
+        hint: 'Bacteria, archaea, parthenogenesis.',
+        back: 'Organisms that reproduce asexually (e.g. bacteria, archaea, apomictic plants) do not interbreed. Because the definition strictly requires interbreeding to define a species boundary, it cannot be logically applied.',
+        keypoints: 'Asexual reproduction • No mating/interbreeding occurs • Binary fission, clones, apomixis',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 7,
+        cat: 'biodiv',
+        verb: 'Explain',
+        front: 'Explain how Ring Species challenge the Biological Species Concept.',
+        hint: 'Geographic barrier like a lake or mountain range.',
+        back: 'Ring species occur around a geographic barrier (mountain/lake). Adjacent/neighbouring populations can interbreed and produce viable, fertile offspring, but populations at the opposite ends of the ring that meet are unable to interbreed, blurring species boundaries.',
+        keypoints: 'Continuous geographic ring • Adjacent populations interbreed • Terminal ends cannot interbreed',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 8,
+        cat: 'biodiv',
+        verb: 'Explain',
+        front: 'How does Selective Infertility (e.g. in Eusocial Insects) limit the species concept?',
+        hint: 'Worker bees and ants.',
+        back: 'In eusocial species (e.g. bees, ants, wasps), the vast majority of individuals (workers) are selectively sterile/infertile. Applying a definition based strictly on fertile reproduction excludes these functional members of the species.',
+        keypoints: 'Sterile castes (workers) • Vast majority cannot breed • Selective infertility in eusociality',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 9,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'What are Subspecies and Varieties, and can they interbreed?',
+        hint: 'Geographic variation without full speciation.',
+        back: 'Subspecies arise when there is physical/genetic variation between populations of a species, but not enough divergence to form a new species. Members of different subspecies <strong>can still reproduce and form viable, fertile offspring</strong>.',
+        keypoints: 'Morphological/geographic variation • Incomplete reproductive isolation • Offspring remain viable and fertile',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 10,
+        cat: 'biodiv',
+        verb: 'Describe',
+        front: 'What are Interspecific Hybrids, and why are they typically sterile?',
+        hint: 'Mules, ligers.',
+        back: 'Hybrids arise when organisms of different species within the same genus interbreed. Their offspring are typically sterile because differing chromosome numbers or homologous mismatches prevent proper chromosome pairing during meiosis.',
+        keypoints: 'Different species in same Genus • Offspring viable but sterile • Meiotic pairing failure',
+        ref: 'Textbook Lesson 2.2 (pg 72-78)'
+      },
+      {
+        id: 11,
+        cat: 'class',
+        verb: 'Identify',
+        front: 'List the major taxa in the Linnaean hierarchy from most general to least general.',
+        hint: 'Dear King Philip Came Over For Good Soup.',
+        back: '1. <strong>Domain</strong> (Most general)<br>2. <strong>Kingdom</strong><br>3. <strong>Phylum</strong><br>4. <strong>Class</strong><br>5. <strong>Order</strong><br>6. <strong>Family</strong><br>7. <strong>Genus</strong><br>8. <strong>Species</strong> (Least general)',
+        keypoints: 'Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species',
+        ref: 'Textbook Lesson 2.3 (pg 79-85)'
+      },
+      {
+        id: 12,
+        cat: 'class',
+        verb: 'Explain',
+        front: 'State the strict QCAA formatting rules for Binomial Nomenclature.',
+        hint: 'Genus vs species, typed vs handwritten.',
+        back: '• Uses <strong>Genus</strong> (capitalized first letter) and <strong>species</strong> (all lower case).<br>• When typed/printed: <em>Italics</em> (e.g. <em>Eucalyptus regnans</em>).<br>• When written by hand: <u>Underlined</u> (e.g. <u>Eucalyptus regnans</u>).',
+        keypoints: 'Genus capitalised • species lower case • Italics when typed • Underlined when handwritten',
+        ref: 'Textbook Lesson 2.3 (pg 79-85)'
+      },
+      {
+        id: 13,
+        cat: 'class',
+        verb: 'Compare',
+        front: 'Compare Branching and Tabular Dichotomous Keys.',
+        hint: 'Tree structure vs numbered couplet statements.',
+        back: '• <strong>Branching Key:</strong> Visual tree diagram splitting into two branches at each node based on observable traits.<br>• <strong>Tabular Key:</strong> Text statements arranged in numbered couplets with instructions on which question to proceed to.',
+        keypoints: 'Branching = tree format • Tabular = numbered text couplets • Both use paired observable traits',
+        ref: 'Textbook Lesson 2.4 (pg 86-87)'
+      },
+      {
+        id: 14,
+        cat: 'class',
+        verb: 'Describe',
+        front: 'How does Specht\'s Classification System categorize ecosystems?',
+        hint: 'Two specific criteria used in Australia.',
+        back: 'Specht\'s system classifies Australian vegetation based on:<br>1. <strong>Growth form of the tallest stratum</strong> (e.g. trees >30m, trees 10-30m, shrubs, hummock grasses).<br>2. <strong>Foliage projective cover</strong> of tallest stratum (% ground shaded: dense >70%, mid-dense 30-70%, sparse 10-30%, very sparse <10%).',
+        keypoints: 'Tallest stratum growth form • Foliage projective cover (%) • Closed forest, Open forest, Woodland, etc.',
+        ref: 'Textbook Lesson 2.8 (pg 114-118)'
+      },
+      {
+        id: 15,
+        cat: 'class',
+        verb: 'Describe',
+        front: 'Identify the three climatic axes of the Holdridge Life Zone Scheme.',
+        hint: 'Precipitation, temperature, evaporation.',
+        back: '1. <strong>Annual Precipitation</strong> (mm).<br>2. <strong>Mean Annual Biotemperature</strong> (0°C to 30°C; below 0°C counts as 0°C).<br>3. <strong>Potential Evapotranspiration (PET) Ratio</strong>.',
+        keypoints: 'Precipitation • Biotemperature (0-30°C) • Potential evapotranspiration ratio (PET)',
+        ref: 'Textbook Lesson 2.8 (pg 114-118)'
+      },
+      {
+        id: 16,
+        cat: 'math',
+        verb: 'Calculate',
+        front: 'State the Lincoln Index formula and define each variable.',
+        hint: 'N = (M * n) / m.',
+        back: '<strong>N = (M × n) / m</strong><br><br>• <strong>N:</strong> Estimated total population size.<br>• <strong>M:</strong> Number of marked individuals from initial capture.<br>• <strong>n:</strong> TOTAL number of individuals captured in second capture.<br>• <strong>m:</strong> Number of MARKED individuals recaptured in second capture.',
+        keypoints: 'N = estimated population • M = 1st catch marked • n = 2nd catch total • m = 2nd catch marked',
+        ref: 'Textbook Lesson 2.10 (pg 135-136)'
+      },
+      {
+        id: 17,
+        cat: 'math',
+        verb: 'Explain',
+        front: 'Why does "Trap-Happy" behaviour cause an UNDERESTIMATION of population size in the Lincoln Index?',
+        hint: 'Food reward increases recaptures (m). Look at the formula N = (M * n) / m.',
+        back: 'Animals return to traps for free food bait. This increases the number of recaptured marked individuals (<strong>m increases</strong>).<br><br>Since <em>m</em> is in the denominator of $N = \frac{M \times n}{m}$, a larger denominator yields a <strong>smaller, underestimated N</strong>.',
+        keypoints: 'Food reward • More marked animals return • m increases • Denominator larger → N underestimated',
+        ref: 'Textbook Lesson 2.10 (pg 135-136)'
+      },
+      {
+        id: 18,
+        cat: 'math',
+        verb: 'Explain',
+        front: 'Why does "Trap-Shy" behaviour cause an OVERESTIMATION of population size in the Lincoln Index?',
+        hint: 'Trapping trauma prevents return, m decreases.',
+        back: 'Animals avoid traps due to stress/handling during the first capture. Fewer marked individuals enter the trap again (<strong>m decreases</strong>).<br><br>A smaller denominator in $N = \frac{M \times n}{m}$ mathematically inflates the result, causing an <strong>overestimated N</strong>.',
+        keypoints: 'Stress/wariness • Marked animals avoid traps • m decreases • Denominator smaller → N overestimated',
+        ref: 'Textbook Lesson 2.10 (pg 135-136)'
+      },
+      {
+        id: 19,
+        cat: 'math',
+        verb: 'Explain',
+        front: 'How does Tag Loss or Mark Fading impact the Lincoln Index estimate?',
+        hint: 'Marked individuals counted as unmarked.',
+        back: 'If tags fall off or marks wash off, marked individuals in the second capture are counted as unmarked. This artificially decreases <em>m</em> (recaptured marked), causing an <strong>overestimation</strong> of total population size $N$.',
+        keypoints: 'Lost marks • Marked animals appear unmarked • m decreases → N is overestimated',
+        ref: 'Textbook Lesson 2.10 (pg 135-136)'
+      },
+      {
+        id: 20,
+        cat: 'math',
+        verb: 'Explain',
+        front: 'Why must the timing between captures be carefully calibrated in capture-recapture studies?',
+        hint: 'Too short vs too long.',
+        back: '• <strong>Too short:</strong> Marked animals do not have sufficient time to disperse/mix randomly through the population.<br>• <strong>Too long:</strong> Natural deaths, births, immigration, or emigration occur, violating the closed population assumption.',
+        keypoints: 'Too fast = inadequate mixing • Too slow = births/deaths/migration alter proportions',
+        ref: 'Textbook Lesson 2.10 (pg 135-136)'
+      },
+      {
+        id: 21,
+        cat: 'math',
+        verb: 'Calculate',
+        front: 'State the Simpson\'s Diversity Index (SDI) formula and explain how to interpret the value.',
+        hint: 'SDI = 1 - [sum n(n-1) / N(N-1)].',
+        back: '<strong>SDI = 1 - [ Σ n(n - 1) / N(N - 1) ]</strong><br><br>• <em>n:</em> number of individuals of a single species.<br>• <em>N:</em> total number of individuals of all species.<br>• <strong>Interpretation:</strong> Ranges from 0 (no diversity) to 1 (infinite diversity). Higher values mean higher diversity (higher probability that two randomly picked individuals belong to different species).',
+        keypoints: 'SDI formula • n = species count • N = total count • 0 = no diversity • 1 = high diversity',
+        ref: 'Textbook Lesson 2.9 (pg 119-127)'
+      },
+      {
+        id: 22,
+        cat: 'math',
+        verb: 'Explain',
+        front: 'Explain the "Page 7 Anomaly": Why is an SDI of 1.0 erroneous when Species A = 1 and Species B = 1?',
+        hint: 'Sample size N = 2, n(n-1) = 0.',
+        back: 'For $n=1$, $n(n-1) = 1(0) = 0$. Thus $\sum n(n-1) = 0$.<br>Plugging in: $SDI = 1 - (0/2) = 1.0$.<br><br><strong>Why erroneous:</strong> The mathematical result indicates maximum diversity, but biologically the ecosystem contains only 2 organisms total, representing an impoverished, non-viable sample.',
+        keypoints: 'n(n-1) = 0 • Result gives SDI = 1.0 • Biologically erroneous due to tiny sample size',
+        ref: 'Textbook Lesson 2.9 (pg 121)'
+      },
+      {
+        id: 23,
+        cat: 'math',
+        verb: 'Calculate',
+        front: 'State the Menhinick Index formula for species richness.',
+        hint: 'S = s / sqrt(N).',
+        back: '<strong>S = s / √N</strong><br><br>• <strong>S:</strong> Species richness index.<br>• <strong>s:</strong> Number of unique species in sample.<br>• <strong>N:</strong> Total number of organisms in sample.<br>Used when sample sizes become exceedingly large.',
+        keypoints: 'S = s / √N • Accounts for large sample sizes • Higher S = richer ecosystem',
+        ref: 'Textbook Lesson 2.9 (pg 119-127)'
+      },
+      {
+        id: 24,
+        cat: 'math',
+        verb: 'Calculate',
+        front: 'State the Relative Abundance (Species Evenness) formula.',
+        hint: 'RA = (TS / TP) * 100.',
+        back: '<strong>RA = (TS / TP) × 100</strong><br><br>• <strong>RA:</strong> Relative abundance (evenness %).<br>• <strong>TS:</strong> Total number of organisms for one species.<br>• <strong>TP:</strong> Total number of organisms for the entire ecosystem.',
+        keypoints: 'RA = (TS / TP) × 100 • Measures how evenly individuals are distributed across species',
+        ref: 'Textbook Lesson 2.9 (pg 119-127)'
+      },
+      {
+        id: 25,
+        cat: 'sampling',
+        verb: 'Describe',
+        front: 'Describe Random Sampling and state when it is best utilized.',
+        hint: 'Equal opportunity of selection.',
+        back: 'Every individual/site in a study area has an equal opportunity of being selected.<br><br><em>Utilized:</em> When a large uniform study area is broken into sections to eliminate conscious human bias.',
+        keypoints: 'Equal probability of selection • Minimises unconscious bias • Can cause clumped sampling by chance',
+        ref: 'Textbook Lesson 1.6 & 2.10 (pg 128-135)'
+      },
+      {
+        id: 26,
+        cat: 'sampling',
+        verb: 'Describe',
+        front: 'Describe Systematic Sampling and state its advantage.',
+        hint: 'Regular predetermined intervals.',
+        back: 'Selection of sites/individuals occurs at regular, predetermined intervals (e.g. every 5 meters, every 2 hours, fixed heights).<br><br><em>Advantage:</em> Limits investigator bias and ensures uniform coverage across an area or gradient.',
+        keypoints: 'Regular predetermined intervals • Fixed distance/time • Ensures uniform coverage across study site',
+        ref: 'Textbook Lesson 1.6 & 2.10 (pg 128-135)'
+      },
+      {
+        id: 27,
+        cat: 'sampling',
+        verb: 'Describe',
+        front: 'Describe Stratified Sampling and explain how strata are established.',
+        hint: 'Dividing site into zones based on an abiotic factor.',
+        back: 'The study site is divided into distinct non-overlapping sub-areas called <strong>strata</strong> based on an abiotic factor (e.g. elevation, light, soil moisture) or vegetation zone. Random sampling then occurs within each stratum proportional to its area.',
+        keypoints: 'Divided into strata • Based on abiotic gradient/vegetation • Proportional sampling per stratum',
+        ref: 'Textbook Lesson 1.6 & 2.10 (pg 128-135)'
+      },
+      {
+        id: 28,
+        cat: 'sampling',
+        verb: 'Compare',
+        front: 'Compare Quadrats, Line Transects, and Belt Transects.',
+        hint: 'Square frame vs single line vs corridor strip.',
+        back: '• <strong>Quadrat:</strong> Square sampling area for sessile/plant species abundance and distribution.<br>• <strong>Line Transect:</strong> A single tape line across an abiotic gradient; records organisms touching the line.<br>• <strong>Belt Transect:</strong> Two parallel lines a set distance apart; records organisms within the corridor.',
+        keypoints: 'Quadrat = square frame • Line = single tape • Belt = width strip between two lines',
+        ref: 'Textbook Lesson 2.6 & 2.10'
+      },
+      {
+        id: 29,
+        cat: 'sampling',
+        verb: 'Explain',
+        front: 'Why are Quadrats unsuitable for sampling mobile animal populations?',
+        hint: 'Movement in and out of frame.',
+        back: 'Animals move in and out of the quadrat area during counting, leading to double-counting or misses, destroying precision and accuracy. Mobile organisms require capture-recapture or remote tracking methods.',
+        keypoints: 'Animals are mobile • Move across boundaries • Introduces severe counting errors and bias',
+        ref: 'Textbook Lesson 2.6 (pg 100)'
+      },
+      {
+        id: 30,
+        cat: 'sampling',
+        verb: 'Explain',
+        front: 'Explain why Random Number Generators are preferred over human choice in quadrat placement.',
+        hint: 'Edge avoidance bias.',
+        back: 'Humans exhibit unconscious selection bias (e.g. favouring edges, avoiding thick thorny patches, or unconsciously picking dense flower patches). Random number generators ensure completely unbiased, objective coordinate selection.',
+        keypoints: 'Eliminates unconscious human bias • Humans avoid edges/centres • Ensures equal probability',
+        ref: 'Textbook Lesson 2.10 (pg 130)'
+      },
+      {
+        id: 31,
+        cat: 'sampling',
+        verb: 'Compare',
+        front: 'Differentiate between Precision and Accuracy in biological data.',
+        hint: 'Repeatability vs Closeness to true value.',
+        back: '• <strong>Accuracy:</strong> How close a measured value is to the true, actual biological value.<br>• <strong>Precision:</strong> How close repeated measurements are to each other (repeatability/consistency). Taking multiple readings minimizes anomalous data.',
+        keypoints: 'Accuracy = closeness to true value • Precision = repeatability of measurements',
+        ref: 'Textbook Lesson 2.10 (pg 131)'
+      },
+      {
+        id: 32,
+        cat: 'factors',
+        verb: 'Compare',
+        front: 'Compare Interspecific Competition and Intraspecific Competition.',
+        hint: 'Between different species vs within same species.',
+        back: '• <strong>Interspecific Competition:</strong> Competition between individuals of <em>different species</em> for shared resources; primarily impacts <strong>abundance</strong>.<br>• <strong>Intraspecific Competition:</strong> Competition between individuals of the <em>same species</em> for identical niche requirements; severely impacts both <strong>abundance and distribution</strong>.',
+        keypoints: 'Interspecific = different species (affects abundance) • Intraspecific = same species (affects distribution & abundance)',
+        ref: 'Textbook Lesson 2.5 (pg 88-97)'
+      },
+      {
+        id: 33,
+        cat: 'factors',
+        verb: 'Describe',
+        front: 'Describe the cyclic oscillation between Predator and Prey populations.',
+        hint: 'Coupled predator-prey curves with a lag phase.',
+        back: 'Predator and prey populations oscillate around each other in a stable ecosystem. An increase in prey provides more food, causing predator numbers to rise. Increased predation then causes prey numbers to decline, leading to a predator decline after a <strong>time lag</strong>.',
+        keypoints: 'Coupled oscillations • Predator curve lags behind prey curve • Negative feedback cycle',
+        ref: 'Textbook Lesson 2.5 (pg 92)'
+      },
+      {
+        id: 34,
+        cat: 'factors',
+        verb: 'Describe',
+        front: 'Describe Shelford\'s Law of Tolerance and its zones along an abiotic gradient.',
+        hint: 'Optimum range, physiological stress, intolerance.',
+        back: 'Each species has a tolerance range for abiotic factors (e.g. temperature, pH):<br>1. <strong>Optimum Range:</strong> Conditions where population density and abundance are greatest.<br>2. <strong>Zones of Physiological Stress:</strong> Conditions above or below optimum where organisms survive but experience stress (lower abundance).<br>3. <strong>Zones of Intolerance:</strong> Conditions where organisms cannot survive (zero abundance).',
+        keypoints: 'Optimum range (highest abundance) • Physiological stress (reduced fitness) • Zone of intolerance (zero survival)',
+        ref: 'Textbook Lesson 2.5 (pg 94)'
+      },
+      {
+        id: 35,
+        cat: 'factors',
+        verb: 'Compare',
+        front: 'Compare Clumped, Uniform, and Random spatial distribution patterns.',
+        hint: 'Patchy resources vs territoriality vs uniform conditions.',
+        back: '• <strong>Clumped:</strong> Most common; organisms aggregate around patchy resources, water, or in social groups (herds/schools).<br>• <strong>Uniform:</strong> Rare; caused by intense intraspecific competition, territoriality (e.g. nesting seabirds), or chemical inhibition.<br>• <strong>Random:</strong> Rare; abiotic factors are uniform and individual interactions are neutral (e.g. wind-dispersed dandelion seeds).',
+        keypoints: 'Clumped = resource patches/social (common) • Uniform = competition/territory • Random = neutral/uniform abiotic',
+        ref: 'Textbook Lesson 2.6 (pg 97-101)'
+      },
+      {
+        id: 36,
+        cat: 'pop',
+        verb: 'Describe',
+        front: 'Describe Exponential Population Growth (J-Curve).',
+        hint: 'Unlimited resources, r-selected.',
+        back: 'The population grows rapidly at an increasing rate over time because it is not restricted by limiting factors or resource scarcity. When graphed, it forms a <strong>J-shaped curve</strong>; typical of $r$-selected species in colonizing phases.',
+        keypoints: 'No limiting factors • Increasing growth rate over time • Forms J-curve • Typical of r-selected species',
+        ref: 'Textbook Lesson 3.3 (pg 156-161)'
+      },
+      {
+        id: 37,
+        cat: 'pop',
+        verb: 'Describe',
+        front: 'Describe Logistic Population Growth (S-Curve) and define Carrying Capacity (K).',
+        hint: 'Plateaus at carrying capacity.',
+        back: 'The population grows exponentially initially, then growth rate decelerates as density-dependent resistance increases, plateauing into an <strong>elongated S-curve</strong>.<br><br><strong>Carrying Capacity (K):</strong> The maximum sustainable population size an ecosystem can support indefinitely without resource depletion.',
+        keypoints: 'Decelerates to plateau • S-shaped curve • Carrying capacity K = maximum sustainable population',
+        ref: 'Textbook Lesson 3.3 (pg 156-161)'
+      },
+      {
+        id: 38,
+        cat: 'pop',
+        verb: 'Compare',
+        front: 'Compare the reproductive strategies of r-strategists and K-strategists.',
+        hint: 'Quantity vs Quality of offspring.',
+        back: '• <strong>r-strategists:</strong> Short lifespan, small body, fast maturation, early breeding, many offspring, low parental care (quantity approach).<br>• <strong>K-strategists:</strong> Long lifespan, large body, slow maturation, late breeding, few offspring, high parental investment and care (quality approach).',
+        keypoints: 'r = many small offspring, fast mature, low care • K = few large offspring, slow mature, high care',
+        ref: 'Textbook Lesson 3.2 (pg 152-156)'
+      },
+      {
+        id: 39,
+        cat: 'pop',
+        verb: 'Compare',
+        front: 'Compare the environments favoured by r- and K-strategists.',
+        hint: 'Unstable pioneer vs stable climax.',
+        back: '• <strong>r-strategists:</strong> Live in unstable, disturbed, or unpredictable environments where abiotic factors fluctuate drastically; boom-and-bust cycles.<br>• <strong>K-strategists:</strong> Live in stable, predictable climax environments where population sits close to carrying capacity $K$ with intense competition.',
+        keypoints: 'r = unstable/disturbed environments • K = stable/climax environments near carrying capacity',
+        ref: 'Textbook Lesson 3.2 (pg 152-156)'
+      },
+      {
+        id: 40,
+        cat: 'pop',
+        verb: 'Calculate',
+        front: 'State the formula for Population Growth Rate (r) and define all variables.',
+        hint: 'r = (b + i) - (d + e).',
+        back: '<strong>r = (b + i) - (d + e)</strong><br><br>• <strong>r:</strong> Population growth rate.<br>• <strong>b:</strong> Number of organisms born or hatched.<br>• <strong>i:</strong> Number of organisms that immigrated in.<br>• <strong>d:</strong> Number of organisms that died.<br>• <strong>e:</strong> Number of organisms that emigrated out.',
+        keypoints: 'r = (b + i) - (d + e) • Gains = births + immigrants • Losses = deaths + emigrants',
+        ref: 'Textbook Lesson 3.2 (pg 152-156)'
+      },
+      {
+        id: 41,
+        cat: 'pop',
+        verb: 'Compare',
+        front: 'Differentiate between Density-Dependent and Density-Independent limiting factors.',
+        hint: 'Competition/disease vs weather/bushfires.',
+        back: '• <strong>Density-Dependent:</strong> Factors whose impact intensifies as population density increases (e.g. food availability, competition, infectious disease, predation).<br>• <strong>Density-Independent:</strong> Factors that impact the population regardless of its density (e.g. floods, bushfires, cyclones, volcanic eruptions).',
+        keypoints: 'Density-dependent = competition, disease, predation • Density-independent = weather, natural disasters',
+        ref: 'Textbook Lesson 3.2 (pg 156)'
+      },
+      {
+        id: 42,
+        cat: 'biodiv',
+        verb: 'Explain',
+        front: 'Explain why Percentage Cover often overrepresents higher strata and underrepresents lower strata.',
+        hint: 'Top-down visual obstruction.',
+        back: 'Percentage cover in vegetation surveys is visually estimated from above. The upper canopy trees obscure the sub-canopy and groundcover layers below, resulting in overrepresentation of the tallest stratum and underrepresentation of lower herbs and seedlings.',
+        keypoints: 'Top-down visual estimation • Canopy blocks view of understorey • Higher strata overrepresented',
+        ref: 'Textbook Lesson 2.9 (pg 120)'
+      }
+    ];
+
+// --- 2. Master Practice Exam Question Bank (50 authentic QCAA MCQs) ---
+    const EXAM_QUESTION_BANK = [
+      {
+        id: 1,
+        question: 'Which of the following best defines genetic diversity according to the QCAA syllabus?',
+        options: [
+          'The number of different habitats and ecological processes within an ecosystem',
+          'The variation in the abundance and distribution of species across communities',
+          'The variation of genes, between organisms, within a species',
+          'The proportion of fertile hybrid offspring produced in captive breeding'
+        ],
+        answer: 2,
+        explanation: 'Genetic diversity specifically refers to the variation of genes/alleles, between organisms, within a species (Textbook pg 69).'
+      },
+      {
+        id: 2,
+        question: 'A group of salamanders occupies a mountain range. Adjacent populations can interbreed, but populations at the northern and southern extremes that meet cannot. This is an example of which limitation to the biological species concept?',
+        options: [
+          'Asexual reproduction and apomixis',
+          'Ring species',
+          'Selective infertility in worker castes',
+          'Fossil record gaps'
+        ],
+        answer: 1,
+        explanation: 'Ring species occur around a geographic barrier where neighbouring populations interbreed, but populations too far removed from each other at the terminal ends cannot (pg 72).'
+      },
+      {
+        id: 3,
+        question: 'According to Linnaean biological classification, which taxon represents the MOST general rank listed below?',
+        options: ['Order', 'Phylum', 'Family', 'Class'],
+        answer: 1,
+        explanation: 'In the Linnaean hierarchy: Domain > Kingdom > Phylum > Class > Order > Family > Genus > Species. Phylum is broader than Class, Order, or Family (pg 79).'
+      },
+      {
+        id: 4,
+        question: 'In a capture-recapture survey of antechinus, 40 individuals are marked in the first capture. In the second capture, 50 individuals are caught, of which 10 are marked. What is the estimated population size (N)?',
+        options: ['100', '200', '400', '500'],
+        answer: 1,
+        explanation: 'Lincoln Index: N = (M × n) / m = (40 × 50) / 10 = 2000 / 10 = 200 organisms (pg 135).'
+      },
+      {
+        id: 5,
+        question: 'If marked sugar gliders develop "trap-happy" behaviour due to food rewards in traps, how does this affect the Lincoln Index population estimate?',
+        options: [
+          'The estimate is unaffected because M remained unchanged.',
+          'The estimate is overestimated because m decreases.',
+          'The estimate is underestimated because m increases.',
+          'The estimate is invalid because capture-recapture only applies to plants.'
+        ],
+        answer: 2,
+        explanation: 'Trap-happy animals return to traps, increasing the recaptured marked count (m). In N = (M × n) / m, an inflated denominator m results in an underestimated N (pg 135).'
+      },
+      {
+        id: 6,
+        question: 'Why is a Simpson\'s Diversity Index (SDI) value of 1.0 considered erroneous when calculated from a sample of only two individual organisms representing two different species?',
+        options: [
+          'SDI can never exceed 0.5 mathematically.',
+          'The formula yields 1 - (0/2) = 1.0, but biologically an ecosystem with only two organisms has very low diversity.',
+          'SDI is only valid when species richness exceeds 10.',
+          'The Menhinick index should have been squared before subtracting from 1.'
+        ],
+        answer: 1,
+        explanation: 'When n=1 for both species, n(n-1) = 0, so SDI = 1 - (0 / 2) = 1.0. This is an artefact of extremely small sample size; in reality, two organisms represent an impoverished ecosystem (pg 121).'
+      },
+      {
+        id: 7,
+        question: 'Which sampling technique is most appropriate for investigating the distribution and abundance of sedentary barnacles along a rocky intertidal gradient?',
+        options: [
+          'Lincoln index mark-release-recapture',
+          'Line transect or belt transect using quadrats',
+          'Random aerial helicopter surveys',
+          'Selective sampling of visually pleasing rocks'
+        ],
+        answer: 1,
+        explanation: 'Barnacles are sessile (non-moving) organisms distributed along an abiotic gradient (tide height). Transects with quadrats are the standard technique (pg 100, 128).'
+      },
+      {
+        id: 8,
+        question: 'Specht\'s classification system defines an Australian plant community with trees 10–30 m tall having 45% foliage projective cover as:',
+        options: [
+          'Closed Forest',
+          'Open Forest',
+          'Woodland',
+          'Open Scrub'
+        ],
+        answer: 1,
+        explanation: 'In Specht\'s system, trees 10-30m with mid-dense foliage projective cover (30-70%) are classified as Open Forest (pg 114).'
+      },
+      {
+        id: 9,
+        question: 'Which of the following sets of characteristics describes an r-strategist?',
+        options: [
+          'Long lifespan, slow maturation, few offspring, extensive parental care',
+          'Short lifespan, rapid maturation, large clutches of offspring, minimal parental care',
+          'Late reproduction, high competitive ability, stable population near carrying capacity K',
+          'High parental investment, low reproductive rate, logistic S-shaped population curve'
+        ],
+        answer: 1,
+        explanation: 'r-strategists are opportunistic species characterized by rapid development, early reproduction, high fecundity, small body size, and low parental investment (pg 152).'
+      },
+      {
+        id: 10,
+        question: 'A desert mouse population recorded 45 births, 15 immigrants, 30 deaths, and 10 emigrants over one year. What is the population growth rate (r)?',
+        options: ['+10', '+20', '+30', '-10'],
+        answer: 1,
+        explanation: 'r = (b + i) - (d + e) = (45 + 15) - (30 + 10) = 60 - 40 = +20 organisms (pg 152).'
+      },
+      {
+        id: 11,
+        question: 'Nesting seabirds defend a circular territory around their burrows, repelling all other individuals of the same species. What spatial distribution pattern does this produce?',
+        options: ['Clumped distribution', 'Uniform distribution', 'Random distribution', 'Stratified distribution'],
+        answer: 1,
+        explanation: 'Intense intraspecific territorial competition results in an evenly spaced, uniform distribution (pg 97-101).'
+      },
+      {
+        id: 12,
+        question: 'Which of the following is classified as a density-independent factor limiting population growth?',
+        options: [
+          'A fungal epidemic spreading rapidly through high-density bat roosts',
+          'Intense competition for nesting hollows among possums',
+          'A catastrophic flash flood destroying all nests along a riverbank',
+          'Increased predation rates on schooling fish'
+        ],
+        answer: 2,
+        explanation: 'Floods, fires, and abiotic weather disasters kill organisms regardless of population density; hence they are density-independent (pg 156).'
+      },
+      {
+        id: 13,
+        question: 'Why are quadrats unsuitable for investigating the distribution and abundance of mobile animal populations such as wallabies?',
+        options: [
+          'Quadrats are always made of wood which repels mammals',
+          'Animals move into and out of the sample area, introducing significant counting errors',
+          'Quadrats can only measure abiotic soil pH',
+          'Animals do not display genetic diversity within quadrats'
+        ],
+        answer: 1,
+        explanation: 'Quadrats are designed for sessile plants; mobile animals move freely across boundaries, creating severe double-counting or omission errors (pg 100).'
+      },
+      {
+        id: 14,
+        question: 'If tags break or wash off marked fish between capture intervals in a Lincoln index study, what will happen to the population estimate?',
+        options: [
+          'It will be underestimated because m increases',
+          'It will be overestimated because m decreases',
+          'It will be unchanged because M and n are constant',
+          'It will become exactly zero'
+        ],
+        answer: 1,
+        explanation: 'If tags are lost, marked fish are counted as unmarked, reducing m. In N = (M × n) / m, a smaller m denominator artificially inflates (overestimates) N (pg 136).'
+      },
+      {
+        id: 15,
+        question: 'Which index is specifically used by ecologists to calculate species richness when sample sizes become exceedingly large?',
+        options: [
+          'Simpson\'s Dominance Index',
+          'Menhinick index (S = s / √N)',
+          'Lincoln index',
+          'Holdridge life zone index'
+        ],
+        answer: 1,
+        explanation: 'The Menhinick index (S = s / √N) calculates species richness scaled to exceedingly large sample sizes (pg 119).'
+      },
+      {
+        id: 16,
+        question: 'What is the correct digital formatting for writing the scientific name of the red kangaroo under binomial nomenclature rules?',
+        options: [
+          'Osphranter Rufus (in bold)',
+          'osphranter rufus (all lower case)',
+          'Osphranter rufus (in italics)',
+          'Osphranter Rufus (in quotation marks)'
+        ],
+        answer: 2,
+        explanation: 'Genus is capitalised, species is all lower case, and the binomial name is italicised when typed digitally (or underlined by hand) (pg 79).'
+      },
+      {
+        id: 17,
+        question: 'How do r-strategists and K-strategists differ in the stability of their environments and typical population growth curves?',
+        options: [
+          'r-strategists: stable climax environments, S-curve; K-strategists: pioneer unstable environments, J-curve',
+          'r-strategists: unstable disturbed environments, J-curve; K-strategists: stable climax environments, S-curve',
+          'Both strategists maintain stable populations at carrying capacity K with S-curves',
+          'r-strategists live in oceans only, while K-strategists live on land only'
+        ],
+        answer: 1,
+        explanation: 'r-strategists thrive in unstable/disturbed environments with exponential J-curves; K-strategists live in stable environments near carrying capacity K with logistic S-curves (pg 152-161).'
+      },
+      {
+        id: 18,
+        question: 'In a sand dune ecosystem, why is stratified sampling superior to simple random sampling?',
+        options: [
+          'It takes much less time and requires no measurement equipment',
+          'It ensures all distinct environmental zones (strata) along the abiotic gradient are sampled proportionally',
+          'It eliminates the need to identify plant species',
+          'Random sampling is illegal in coastal zones'
+        ],
+        answer: 1,
+        explanation: 'Stratified sampling ensures every distinct sub-zone or stratum across an abiotic gradient (e.g. foredune, mid-dune, hind-dune) is sampled proportionally without chance omissions (pg 128).'
+      },
+      {
+        id: 19,
+        question: 'What is the carrying capacity (K value) of a population?',
+        options: [
+          'The maximum speed at which a population can migrate',
+          'The sustainable maximum population size an ecosystem can support without resource depletion',
+          'The number of offspring produced by a single female in her lifetime',
+          'The total biomass of all autotrophs in a food web'
+        ],
+        answer: 1,
+        explanation: 'Carrying capacity (K) is the sustainable amount of organisms able to exist in an area indefinitely without depleting environmental resources (pg 156).'
+      },
+      {
+        id: 20,
+        question: 'Why does percentage cover in a rainforest vegetation survey tend to overrepresent the tallest canopy stratum?',
+        options: [
+          'Canopy trees have higher genetic diversity than herbs',
+          'Visual estimation from above is blocked by the upper tree canopy, obscuring lower understorey layers',
+          'Understorey plants do not carry out photosynthesis',
+          'Tallest trees always have 100% foliage projective cover'
+        ],
+        answer: 1,
+        explanation: 'Percentage cover is a top-down visual estimate; the upper tree canopy obscures and underrepresents the lower strata beneath it (pg 120).'
+      },
+      {
+        id: 21,
+        question: 'In a capture-recapture study, what happens if the time between first and second capture is too short?',
+        options: [
+          'Organisms will have died of old age',
+          'Marked organisms will not have had sufficient time to disperse and mix randomly into the population',
+          'All markings will have permanently washed away',
+          'The population will have doubled through birth rate'
+        ],
+        answer: 1,
+        explanation: 'Recapturing too quickly does not allow sufficient time for marked organisms to disperse and mix randomly through the population (pg 136).'
+      },
+      {
+        id: 22,
+        question: 'Which of the following organisms represents an asexual or apomictic group that challenges the biological species concept?',
+        options: ['Bacteria undergoing binary fission', 'Kangaroos', 'Magpies', 'Koalas'],
+        answer: 0,
+        explanation: 'Bacteria reproduce asexually via binary fission and do not interbreed, making the interbreeding criterion of the species concept inapplicable (pg 72).'
+      },
+      {
+        id: 23,
+        question: 'What distinguishes interspecific competition from intraspecific competition?',
+        options: [
+          'Interspecific is between individuals of different species; intraspecific is between individuals of the same species',
+          'Interspecific affects only plants, while intraspecific affects only animals',
+          'Intraspecific is between different kingdoms; interspecific is between different genera',
+          'Interspecific affects distribution, while intraspecific has no effect on populations'
+        ],
+        answer: 0,
+        explanation: 'Interspecific competition occurs between different species for shared resources; intraspecific occurs between members of the same species (pg 88-97).'
+      },
+      {
+        id: 24,
+        question: 'In Shelford\'s Law of Tolerance, where along an abiotic gradient is the greatest abundance of a species population found?',
+        options: [
+          'Zone of physiological stress',
+          'Zone of intolerance',
+          'Optimum range (preferred niche)',
+          'Marginal niche'
+        ],
+        answer: 2,
+        explanation: 'The optimum range is the environmental zone where conditions are most favourable and species abundance is highest (pg 94).'
+      },
+      {
+        id: 25,
+        question: 'A survey finds that 15 out of 50 sampled quadrats contain kangaroo grass (Themeda triandra). What is the percentage frequency?',
+        options: ['15%', '30%', '45%', '50%'],
+        answer: 1,
+        explanation: 'Percentage frequency = (Number of sites with species / Total sites) × 100 = (15 / 50) × 100 = 30% (pg 120).'
+      },
+      {
+        id: 26,
+        question: 'Why do biologists use random number generators rather than personal choice to place quadrats in a sampling grid?',
+        options: [
+          'Random number generators ensure quadrats are always placed at the exact outer perimeter',
+          'Human selection exhibits unconscious bias (e.g. avoiding dense thorns or favouring accessible edges)',
+          'Random number generators automatically count the species abundance',
+          'Human selection is faster but prohibited by QCAA calculators'
+        ],
+        answer: 1,
+        explanation: 'Human selection exhibits unconscious bias (such as avoiding thorny vegetation or favouring edges); random number generators ensure unbiased site selection (pg 130).'
+      },
+      {
+        id: 27,
+        question: 'In a capture-recapture study of possums, 60 possums are tagged. In the second capture, 45 possums are caught, of which 9 are tagged. What is the estimated total population size?',
+        options: ['200', '300', '400', '540'],
+        answer: 1,
+        explanation: 'N = (M × n) / m = (60 × 45) / 9 = 2700 / 9 = 300 possums (pg 135).'
+      },
+      {
+        id: 28,
+        question: 'Which of the following is a key feature of a tabular dichotomous key?',
+        options: [
+          'A branching tree diagram showing evolutionary cladistics',
+          'Paired text statements (couplets) with instructions guiding the user to the next step',
+          'A circular wheel of temperature and rainfall indices',
+          'A single formula calculating species richness'
+        ],
+        answer: 1,
+        explanation: 'A tabular dichotomous key arranges information in numbered text couplets with instructions on which question to proceed to (pg 86).'
+      },
+      {
+        id: 29,
+        question: 'What happens to the Lincoln index estimate if marked animals suffer high mortality due to handling trauma before the second capture?',
+        options: [
+          'The estimate is unaffected because marked dead animals are still counted in the traps',
+          'The estimate is overestimated because fewer marked animals survive to enter the second capture (m decreases)',
+          'The estimate is underestimated because M decreases',
+          'The estimate drops to zero'
+        ],
+        answer: 1,
+        explanation: 'The Lincoln index relies on living organisms. If marked animals die, fewer marked individuals are recaptured (m drops), which mathematically overestimates N (pg 136).'
+      },
+      {
+        id: 30,
+        question: 'Which three climatic factors define the Holdridge Life Zone Scheme?',
+        options: [
+          'Annual precipitation, mean annual biotemperature, and potential evapotranspiration ratio',
+          'Soil nitrogen, canopy height, and wind speed',
+          'Species richness, percentage cover, and Lincoln index',
+          'Elevation, ocean depth, and atmospheric pressure'
+        ],
+        answer: 0,
+        explanation: 'The Holdridge scheme classifies bioclimatic zones using annual precipitation, mean annual biotemperature (0-30°C), and potential evapotranspiration (PET) ratio (pg 114).'
+      },
+      {
+        id: 31,
+        question: 'Which spatial distribution pattern is the MOST common in natural ecosystems?',
+        options: ['Uniform distribution', 'Clumped distribution', 'Random distribution', 'Linear distribution'],
+        answer: 1,
+        explanation: 'Clumped distribution is most common in nature because resources (food, water, shelter) are patchy, and organisms form social groups (pg 97-101).'
+      },
+      {
+        id: 32,
+        question: 'What is the relationship between predator and prey populations in a stable ecosystem over time?',
+        options: [
+          'Both populations remain perfectly constant with no change',
+          'Predator and prey populations oscillate cyclically, with predator peaks lagging behind prey peaks',
+          'Prey populations always go extinct within two years',
+          'Predators increase exponentially while prey decrease to zero'
+        ],
+        answer: 1,
+        explanation: 'Predator and prey populations undergo coupled oscillations where predator population peaks and troughs lag behind prey numbers (pg 92).'
+      },
+      {
+        id: 33,
+        question: 'What is the difference between precision and accuracy in ecological data collection?',
+        options: [
+          'Accuracy is repeatability of measurements; precision is closeness to the true biological value',
+          'Accuracy is closeness to the true value; precision is the repeatability and consistency of measurements',
+          'Precision only applies to plant surveys; accuracy only applies to animal surveys',
+          'Precision and accuracy are identical terms in biology'
+        ],
+        answer: 1,
+        explanation: 'Accuracy is how close a measurement is to the true biological value; precision is the repeatability and closeness of repeated measurements to each other (pg 131).'
+      },
+      {
+        id: 34,
+        question: 'Why are female mules (cross between a male donkey and female horse) sterile, presenting a limitation to the species concept?',
+        options: [
+          'They reproduce purely through apomixis',
+          'Mismatched chromosome numbers prevent homologous chromosome pairing during meiosis',
+          'They belong to different biological kingdoms',
+          'Their reproductive organs are surgically removed at birth'
+        ],
+        answer: 1,
+        explanation: 'Interspecific hybrids often have differing numbers of chromosomes from each parent species, preventing homologous pairing during meiosis and producing sterile gametes (pg 72).'
+      },
+      {
+        id: 35,
+        question: 'In a quadrat sample of 200 total organisms across 4 species, Species A has 50 individuals. What is the relative abundance (evenness) of Species A?',
+        options: ['20%', '25%', '50%', '75%'],
+        answer: 1,
+        explanation: 'Relative abundance RA = (TS / TP) × 100 = (50 / 200) × 100 = 25% (pg 120).'
+      },
+      {
+        id: 36,
+        question: 'Which sampling method involves collecting data at predetermined regular intervals of distance (e.g. every 5 meters along a straight line)?',
+        options: ['Random sampling', 'Systematic sampling', 'Stratified sampling', 'Opportunistic sampling'],
+        answer: 1,
+        explanation: 'Systematic sampling involves selecting sample points at regular, predetermined intervals across a study site (pg 128).'
+      },
+      {
+        id: 37,
+        question: 'What happens to a population growing exponentially (J-curve) when it encounters environmental resistance?',
+        options: [
+          'It continues growing at an infinite rate',
+          'Its growth rate decelerates and it transitions into an S-shaped logistic curve plateauing at carrying capacity K',
+          'It instantly drops to zero organisms',
+          'It transforms into a uniform spatial distribution'
+        ],
+        answer: 1,
+        explanation: 'As limiting factors increase environmental resistance, exponential growth slows and transitions into logistic (S-curve) growth at carrying capacity K (pg 156).'
+      },
+      {
+        id: 38,
+        question: 'Which of the following is a biotic factor influencing the distribution and abundance of organisms?',
+        options: ['Soil pH', 'Predation and disease', 'Ambient air temperature', 'Topographical elevation'],
+        answer: 1,
+        explanation: 'Biotic factors are living organisms or biological interactions, such as predation, disease, competition, and food availability (pg 88).'
+      },
+      {
+        id: 39,
+        question: 'In eusocial insects such as honeybees, why does the biological species concept encounter difficulty?',
+        options: [
+          'Bees cannot fly across geographic barriers',
+          'The vast majority of female workers in the colony are selectively sterile and cannot breed',
+          'Bees reproduce only through binary fission',
+          'Drones and queens belong to different orders'
+        ],
+        answer: 1,
+        explanation: 'Worker bees are selectively infertile yet perform essential ecological roles within the species, challenging definitions based strictly on fertile breeding (pg 72).'
+      },
+      {
+        id: 40,
+        question: 'A forest sample contains 100 organisms. Simpson\'s Diversity Index calculation yields Σ n(n-1) = 990. Denominator N(N-1) = 9900. What is the SDI value?',
+        options: ['0.10', '0.50', '0.90', '1.00'],
+        answer: 2,
+        explanation: 'SDI = 1 - [ Σ n(n-1) / N(N-1) ] = 1 - [ 990 / 9900 ] = 1 - 0.10 = 0.90 (pg 120).'
+      },
+      {
+        id: 41,
+        question: 'Why are fossilized organisms (such as dinosaurs) impossible to classify definitively under the biological species concept?',
+        options: [
+          'Fossils contain no bones',
+          'Extinct organisms are dead, making it impossible to observe mating behaviour or verify viable, fertile offspring',
+          'Fossils are classified using only Specht\'s system',
+          'Linnaean classification does not allow extinct species'
+        ],
+        answer: 1,
+        explanation: 'Because fossils are dead, reproductive capability, mating behaviour, and offspring fertility cannot be tested or observed (pg 72).'
+      },
+      {
+        id: 42,
+        question: 'Which of the following describes a belt transect rather than a line transect?',
+        options: [
+          'A single tape line where organisms touching the line are recorded',
+          'Two parallel lines set a fixed distance apart, recording organisms within the corridor strip between them',
+          'A mark-release-recapture cage network',
+          'A random number coordinate grid'
+        ],
+        answer: 1,
+        explanation: 'A belt transect uses two parallel lines a set distance apart, sampling all organisms within the belt corridor (pg 100).'
+      },
+      {
+        id: 43,
+        question: 'If a population has 80 births, 20 immigrants, 50 deaths, and 10 emigrants over a year, what is the net population change?',
+        options: ['+40', '+60', '-20', '+100'],
+        answer: 0,
+        explanation: 'r = (b + i) - (d + e) = (80 + 20) - (50 + 10) = 100 - 60 = +40 (pg 152).'
+      },
+      {
+        id: 44,
+        question: 'In an environment where resources are distributed evenly and interactions between individuals are neutral, what spatial distribution pattern emerges?',
+        options: ['Uniform', 'Clumped', 'Random', 'Stratified'],
+        answer: 2,
+        explanation: 'Random distribution occurs when environmental conditions are uniform and organisms have neutral interactions with no strong attraction or repulsion (pg 97-101).'
+      },
+      {
+        id: 45,
+        question: 'Under QCAA convention, when writing binomial nomenclature by hand during an examination, the species name must be:',
+        options: [
+          'Circled in red ink',
+          'Underlined',
+          'Enclosed in brackets',
+          'Written entirely in capital letters'
+        ],
+        answer: 1,
+        explanation: 'When written by hand in an exam, binomial names must be underlined (since handwriting cannot reliably display italics) (pg 79).'
+      },
+      {
+        id: 46,
+        question: 'What is the primary effect of severe intraspecific competition on a population?',
+        options: [
+          'It affects neither abundance nor distribution',
+          'It severely impacts both the abundance and spatial distribution of the species',
+          'It causes all members to switch to asexual reproduction',
+          'It affects only heterotrophic predators'
+        ],
+        answer: 1,
+        explanation: 'Intraspecific competition for identical resources limits both population abundance and forces individuals to spread out, altering distribution (pg 88).'
+      },
+      {
+        id: 47,
+        question: 'A scientist establishes clear counting criteria before surveying crab burrows in a mangrove flat. Why is this critical to minimise bias?',
+        options: [
+          'It ensures all crabs are marked with metal tags',
+          'It ensures consistency and precision across different observers, avoiding over- or under-counting',
+          'It guarantees an SDI value above 0.95',
+          'It prevents crabs from moving during the survey'
+        ],
+        answer: 1,
+        explanation: 'Predetermined counting criteria (e.g. only counting active burrows >2cm wide) ensure consistency, precision, and avoid observer misrepresentation (pg 131).'
+      },
+      {
+        id: 48,
+        question: 'Which of the following is an example of apomixis in plants limiting the biological species concept?',
+        options: [
+          'Producing seeds asexually without fertilisation or cross-pollination',
+          'Developing deep tap roots to access groundwater',
+          'Cross-pollination between two different genera',
+          'Losing leaves during a winter deciduous period'
+        ],
+        answer: 0,
+        explanation: 'Apomixis is asexual reproduction via seeds without fertilisation, bypassing interbreeding entirely (pg 72).'
+      },
+      {
+        id: 49,
+        question: 'In capture-recapture sampling, why would bad weather (such as heavy rain) introduce an experimental error in population estimation?',
+        options: [
+          'It causes all organisms to emigrate instantly',
+          'Animals may shelter and remain inactive, altering capture probability between sampling periods',
+          'It increases the Menhinick index by 50%',
+          'Rain converts r-selected species into K-selected species'
+        ],
+        answer: 1,
+        explanation: 'Inclement weather alters organism behaviour (e.g. remaining in shelter), skewing capture probability and violating consistency between catches (pg 135).'
+      },
+      {
+        id: 50,
+        question: 'If a student calculates Simpson\'s Diversity Index and obtains SDI = 0.88, how should this ecosystem be interpreted?',
+        options: [
+          'The ecosystem has very low biodiversity dominated by a single species',
+          'The ecosystem has high biodiversity with high species richness and evenness',
+          'The calculation is invalid because SDI must be greater than 1.0',
+          'The population is undergoing catastrophic exponential crash'
+        ],
+        answer: 1,
+        explanation: 'SDI values close to 1.0 (such as 0.88) indicate high diversity, meaning there is an 88% probability that two randomly selected individuals belong to different species (pg 120).'
+      }
+    ];
+
+    // Current Active Exam Questions (20 questions drawn randomly)
+    let currentExamQuestions = [];
+
+    // Helper: Shuffle array
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    // Generate a fresh set of 20 random questions from the master question bank
+    function generateRandomExam(numQuestions = 20) {
+      const shuffledBank = shuffleArray(EXAM_QUESTION_BANK);
+      const selected = shuffledBank.slice(0, numQuestions);
+
+      // Also shuffle options for each selected question so answers aren't predictable
+      return selected.map((q, idx) => {
+        const originalCorrectOption = q.options[q.answer];
+        const shuffledOptions = shuffleArray(q.options);
+        const newCorrectAnswerIndex = shuffledOptions.indexOf(originalCorrectOption);
+
+        return {
+          id: q.id,
+          displayNum: idx + 1,
+          question: q.question,
+          options: shuffledOptions,
+          answer: newCorrectAnswerIndex,
+          explanation: q.explanation
+        };
+      });
+    }
+
+    // --- 3. Exam Drill Scenarios for AI Reviewer ---
+    const DRILL_SCENARIOS = [
+      {
+        id: 1,
+        marks: 3,
+        title: 'Trap Bias in Lincoln Index',
+        question: 'A biologist investigating a population of sugar gliders sets baited cage traps. The captured animals are ear-tagged and released. Over the next month, the gliders frequently return to the traps to feed on the bait. Explain the effect this behaviour will have on the estimated population size (N).',
+        criteria: [
+          'Identifies that gliders exhibit "trap-happy" behaviour (1 mark)',
+          'Identifies that the number of recaptured marked individuals (m) will increase (1 mark)',
+          'Explains that as m is in the denominator of N = (M × n) / m, the calculated population size will be an UNDERESTIMATION of true population size (1 mark)'
+        ],
+        exemplar: 'The gliders are displaying "trap-happy" behaviour because they associate the traps with a food reward. Consequently, marked individuals are more likely to re-enter the traps, leading to an artificially high number of recaptured marked individuals (m increases). Since m is the denominator in the Lincoln Index formula N = (M × n) / m, an inflated m value mathematically results in an UNDERESTIMATION of the actual population size.'
+      },
+      {
+        id: 2,
+        marks: 3,
+        title: 'Biological Species Concept Limitation',
+        question: 'Explain why the biological species concept cannot be applied to classify bacteria and extinct fossilized trilobites.',
+        criteria: [
+          'Defines species concept based on interbreeding and producing viable, fertile offspring (1 mark)',
+          'Explains that bacteria reproduce asexually (binary fission) without interbreeding (1 mark)',
+          'Explains that trilobites are dead / fossilized, so reproductive capability and fertility cannot be tested or observed (1 mark)'
+        ],
+        exemplar: 'The biological species concept defines a species as a group of organisms capable of interbreeding in nature to produce viable, fertile offspring. Bacteria reproduce asexually via binary fission and do not interbreed, making this criterion inapplicable. Fossilized trilobites are extinct and dead, meaning their reproductive behaviour, interbreeding, and offspring viability cannot be observed or tested.'
+      },
+      {
+        id: 3,
+        marks: 3,
+        title: 'r- vs K-Strategists in Disturbed Habitats',
+        question: 'Following a severe bushfire, an ecosystem experiences pioneer recolonization. Predict whether r- or K-strategists will dominate this initial successional stage and justify your prediction with two life history traits.',
+        criteria: [
+          'Identifies that r-strategists will dominate the initial recolonization (1 mark)',
+          'Justifies with rapid reproduction / high fecundity allowing rapid population growth (1 mark)',
+          'Justifies with short maturation / ability to thrive in unstable, resource-open environments without dense competition (1 mark)'
+        ],
+        exemplar: 'r-strategists will dominate the initial post-fire recolonization. The post-fire habitat is an unstable, open environment with low competition and abundant pioneer space. r-strategists are adapted for this because they possess rapid maturation and produce large numbers of offspring (high fecundity) with high dispersal capability, allowing their populations to expand exponentially (J-curve) before competitive K-strategists can establish.'
+      },
+      {
+        id: 4,
+        marks: 3,
+        title: 'Sampling Along an Abiotic Gradient',
+        question: 'A student wishes to investigate plant community zonation from the ocean shoreline across a coastal sand dune system. Justify why stratified or belt transect sampling is more appropriate than simple random sampling in this investigation.',
+        criteria: [
+          'Identifies that the coastal dune system exhibits an environmental / abiotic gradient (e.g. salinity, wind, soil moisture) (1 mark)',
+          'Explains that random sampling may miss distinct zones or oversample one area by chance (1 mark)',
+          'Explains that a belt transect or stratified sampling systematically captures changes in species distribution and abundance directly linked to the gradient (1 mark)'
+        ],
+        exemplar: 'A coastal sand dune system exhibits a distinct abiotic gradient (e.g., changes in wind exposure, salt spray, soil moisture, and substrate stability with increasing distance from the ocean). Random sampling is inappropriate because it may cluster samples in one zone while omitting transition zones by chance. In contrast, a transect or stratified sampling method systematically samples across every stratum along the gradient, directly correlating changes in species abundance and distribution with the underlying abiotic factors.'
+      }
+    ];
+
+    // --- State Variables ---
+    let currentCardIndex = 0;
+    let filteredCards = [...FLASHCARDS];
+    let masteredCardIds = new Set();
+    let currentFilterCat = 'all';
+    let isFlipped = false;
+    let currentDrillIndex = 0;
+    let currentTutorMode = 'chat'; // 'chat' or 'drill'
+    let customGeminiKey = '';
+    let growthChartInstance = null;
+
+    function isValidApiKeyFormat(k) {
+      if (!k || typeof k !== 'string') return false;
+      const trimmed = k.trim();
+      return (trimmed.startsWith('AQ.') || trimmed.startsWith('AIza') || (trimmed.length >= 20 && !/\s/.test(trimmed)));
+    }
+
+    // Load LocalStorage
+    try {
+      const savedMastered = localStorage.getItem('qcaa_bio_mastered');
+      if (savedMastered) {
+        masteredCardIds = new Set(JSON.parse(savedMastered));
+      }
+      const savedKey = localStorage.getItem('qcaa_gemini_key');
+      if (savedKey && isValidApiKeyFormat(savedKey)) {
+        customGeminiKey = savedKey.trim();
+        document.getElementById('key-status').textContent = 'Status: API Key Active (saved on this device)';
+        document.getElementById('key-status').className = 'text-[10px] text-emerald-600 font-semibold';
+      } else {
+        document.getElementById('key-status').textContent = 'Status: Using embedded QCAA Syllabus Knowledge Engine';
+        document.getElementById('key-status').className = 'text-[10px] text-slate-400';
+      }
+      document.getElementById('gemini-api-key').value = customGeminiKey;
+    } catch(e) {
+      console.warn('LocalStorage unavailable in sandbox:', e);
+    }
+
+    // --- Tab Switching Logic ---
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tab = btn.getAttribute('data-tab');
+        
+        navButtons.forEach(b => {
+          b.classList.remove('active', 'bg-emerald-600', 'text-white', 'shadow-sm');
+          b.classList.add('bg-slate-800/60', 'text-slate-200');
+        });
+        btn.classList.add('active', 'bg-emerald-600', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-slate-800/60', 'text-slate-200');
+
+        tabPanes.forEach(pane => pane.classList.add('hidden'));
+        const activePane = document.getElementById(`section-${tab}`);
+        if (activePane) activePane.classList.remove('hidden');
+
+        if (tab === 'calculators' && !growthChartInstance) {
+          initGrowthChart();
+        }
+      });
+    });
+
+    // --- Flashcard Logic ---
+    function updateMasteryUI() {
+      const total = FLASHCARDS.length;
+      const mastered = masteredCardIds.size;
+      const remaining = total - mastered;
+      const pct = Math.round((mastered / total) * 100);
+
+      document.getElementById('mastery-percent').textContent = `${pct}%`;
+      document.getElementById('mastery-bar').style.width = `${pct}%`;
+      document.getElementById('mastered-count').textContent = `${mastered} Mastered`;
+      document.getElementById('remaining-count').textContent = `${remaining} Remaining`;
+
+      // Update card navigator list
+      renderCardQuickList();
+    }
+
+    function saveMastery() {
+      try {
+        localStorage.setItem('qcaa_bio_mastered', JSON.stringify([...masteredCardIds]));
+      } catch(e) {}
+      updateMasteryUI();
+    }
+
+    function renderCardQuickList() {
+      const container = document.getElementById('cards-quick-list');
+      container.innerHTML = '';
+      document.getElementById('deck-list-count').textContent = `${filteredCards.length} in view`;
+
+      filteredCards.forEach((c, idx) => {
+        const isMastered = masteredCardIds.has(c.id);
+        const item = document.createElement('div');
+        item.className = `p-2 rounded-lg cursor-pointer flex items-center justify-between transition-colors ${idx === currentCardIndex ? 'bg-emerald-100 text-emerald-950 font-semibold border border-emerald-300' : 'bg-slate-50 hover:bg-slate-100 text-slate-700'}`;
+        item.innerHTML = `
+          <div class="flex items-center gap-1.5 truncate">
+            <span>${isMastered ? '✅' : '⚪'}</span>
+            <span class="truncate">#${c.id}: ${c.front.substring(0, 38)}...</span>
+          </div>
+          <span class="text-[10px] uppercase font-mono px-1 rounded bg-white text-slate-500">${c.verb}</span>
+        `;
+        item.addEventListener('click', () => {
+          currentCardIndex = idx;
+          isFlipped = false;
+          renderCurrentCard();
+        });
+        container.appendChild(item);
+      });
+    }
+
+    function renderCurrentCard() {
+      if (filteredCards.length === 0) {
+        document.getElementById('card-front-text').textContent = 'No cards match this filter!';
+        document.getElementById('card-front-hint').textContent = 'Try selecting "All Cards" or resetting mastery.';
+        document.getElementById('card-front-verb').textContent = 'None';
+        document.getElementById('card-counter').textContent = '0 of 0';
+        return;
+      }
+
+      if (currentCardIndex >= filteredCards.length) currentCardIndex = 0;
+      if (currentCardIndex < 0) currentCardIndex = filteredCards.length - 1;
+
+      const card = filteredCards[currentCardIndex];
+      const inner = document.getElementById('flashcard-inner');
+      if (isFlipped) {
+        inner.classList.add('rotate-y-180');
+      } else {
+        inner.classList.remove('rotate-y-180');
+      }
+
+      document.getElementById('card-counter').textContent = `Card ${currentCardIndex + 1} of ${filteredCards.length}`;
+      document.getElementById('card-category-badge').textContent = getCategoryName(card.cat);
+      
+      document.getElementById('card-front-verb').textContent = card.verb;
+      document.getElementById('card-front-text').textContent = card.front;
+      document.getElementById('card-front-hint').textContent = card.hint;
+      document.getElementById('card-textbook-ref').textContent = card.ref;
+
+      document.getElementById('card-back-text').innerHTML = card.back;
+      document.getElementById('card-back-keypoints').innerHTML = `<strong>QCAA Marking Focus:</strong> ${card.keypoints}`;
+
+      // Update Mastered Button State
+      const isMastered = masteredCardIds.has(card.id);
+      const btnMastered = document.getElementById('btn-toggle-mastered');
+      if (isMastered) {
+        document.getElementById('mastered-icon').textContent = '✅';
+        document.getElementById('mastered-label').textContent = 'Mastered (Click to Unmark)';
+        btnMastered.className = 'flex-1 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white border border-emerald-700 rounded-xl font-semibold text-sm shadow-sm transition-all flex items-center justify-center gap-1.5';
+      } else {
+        document.getElementById('mastered-icon').textContent = '⭐';
+        document.getElementById('mastered-label').textContent = 'Mark as Mastered';
+        btnMastered.className = 'flex-1 py-2.5 px-4 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl font-semibold text-sm shadow-sm transition-all flex items-center justify-center gap-1.5';
+      }
+
+      renderCardQuickList();
+    }
+
+    function getCategoryName(catKey) {
+      const map = {
+        biodiv: 'Biodiversity & Species',
+        class: 'Taxa & Keys',
+        math: 'Lincoln & Simpson Math',
+        sampling: 'Sampling & Bias',
+        factors: 'Abiotic & Biotic Factors',
+        pop: 'Population & r/K'
+      };
+      return map[catKey] || 'General';
+    }
+
+    function flipCard() {
+      isFlipped = !isFlipped;
+      const inner = document.getElementById('flashcard-inner');
+      if (isFlipped) {
+        inner.classList.add('rotate-y-180');
+      } else {
+        inner.classList.remove('rotate-y-180');
+      }
+    }
+
+    // Card Event Listeners
+    document.getElementById('flashcard-scene').addEventListener('click', flipCard);
+    document.getElementById('btn-flip-card').addEventListener('click', flipCard);
+
+    document.getElementById('btn-next-card').addEventListener('click', (e) => {
+      e.stopPropagation();
+      isFlipped = false;
+      currentCardIndex = (currentCardIndex + 1) % filteredCards.length;
+      renderCurrentCard();
+    });
+
+    document.getElementById('btn-prev-card').addEventListener('click', (e) => {
+      e.stopPropagation();
+      isFlipped = false;
+      currentCardIndex = (currentCardIndex - 1 + filteredCards.length) % filteredCards.length;
+      renderCurrentCard();
+    });
+
+    document.getElementById('btn-toggle-mastered').addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (filteredCards.length === 0) return;
+      const card = filteredCards[currentCardIndex];
+      if (masteredCardIds.has(card.id)) {
+        masteredCardIds.delete(card.id);
+      } else {
+        masteredCardIds.add(card.id);
+      }
+      saveMastery();
+      renderCurrentCard();
+    });
+
+    document.getElementById('btn-shuffle').addEventListener('click', () => {
+      filteredCards.sort(() => Math.random() - 0.5);
+      currentCardIndex = 0;
+      isFlipped = false;
+      renderCurrentCard();
+    });
+
+    document.getElementById('btn-reset-deck').addEventListener('click', () => {
+      masteredCardIds.clear();
+      saveMastery();
+      renderCurrentCard();
+    });
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      // Don't trigger when typing in input/textarea
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.code === 'Space') {
+        e.preventDefault();
+        flipCard();
+      } else if (e.code === 'ArrowRight') {
+        e.preventDefault();
+        isFlipped = false;
+        currentCardIndex = (currentCardIndex + 1) % filteredCards.length;
+        renderCurrentCard();
+      } else if (e.code === 'ArrowLeft') {
+        e.preventDefault();
+        isFlipped = false;
+        currentCardIndex = (currentCardIndex - 1 + filteredCards.length) % filteredCards.length;
+        renderCurrentCard();
+      }
+    });
+
+    // Category Filter Buttons
+    const catButtons = document.querySelectorAll('.cat-filter-btn');
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => {
+          b.classList.remove('bg-emerald-600', 'text-white', 'shadow-sm');
+          b.classList.add('bg-slate-200', 'text-slate-700');
+        });
+        btn.classList.add('bg-emerald-600', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-slate-200', 'text-slate-700');
+
+        const cat = btn.getAttribute('data-cat');
+        currentFilterCat = cat;
+
+        if (cat === 'all') {
+          filteredCards = [...FLASHCARDS];
+        } else if (cat === 'unmastered') {
+          filteredCards = FLASHCARDS.filter(c => !masteredCardIds.has(c.id));
+        } else {
+          filteredCards = FLASHCARDS.filter(c => c.cat === cat);
+        }
+
+        currentCardIndex = 0;
+        isFlipped = false;
+        document.getElementById('card-stats-text').textContent = `Showing ${filteredCards.length} Cards`;
+        renderCurrentCard();
+      });
+    });
+
+    // --- 4. Built-in AI Reviewer Logic ---
+    const chatMessages = document.getElementById('ai-chat-messages');
+    const chatForm = document.getElementById('ai-chat-form');
+    const chatInput = document.getElementById('ai-chat-input');
+
+    function appendMessage(sender, htmlContent) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex items-start gap-3';
+
+      if (sender === 'user') {
+        msgDiv.innerHTML = `
+          <div class="bg-emerald-700 text-white rounded-2xl rounded-tr-sm p-3.5 text-xs sm:text-sm shadow-sm max-w-xl ml-auto">
+            ${htmlContent}
+          </div>
+          <div class="w-8 h-8 rounded-lg bg-slate-800 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
+            👤
+          </div>
+        `;
+      } else {
+        msgDiv.innerHTML = `
+          <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs shrink-0 shadow-sm">
+            🤖
+          </div>
+          <div class="bg-white border border-slate-200/80 rounded-2xl rounded-tl-sm p-4 text-xs sm:text-sm text-slate-800 shadow-sm max-w-xl space-y-2">
+            ${htmlContent}
+          </div>
+        `;
+      }
+
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Comprehensive Knowledge Base Engine for Offline Q&A (Covers all 17 pages of Bradshaw PDF)
+    function answerSyllabusQuery(query) {
+      const q = query.toLowerCase().trim();
+
+      // 1. Greetings / Help / Study Plan
+      if (/^(hi|hello|hey|g'day|good morning|good afternoon|help|start|what can you do)/i.test(q)) {
+        return `
+          <p class="font-bold text-emerald-800">G'day! Ready to ace your QCAA Biology External Exam?</p>
+          <p>I have the entire <strong>Unit 3 Topic 1: Biodiversity and Populations</strong> Bradshaw overview built into my memory. Ask me anything, such as:</p>
+          <ul class="list-disc pl-4 space-y-1 text-xs text-slate-700">
+            <li><em>"Explain genetic, species, and ecosystem diversity"</em></li>
+            <li><em>"What are the 5 limitations of the biological species concept?"</em></li>
+            <li><em>"Why does trap-happy or trap-shy skew the Lincoln Index?"</em></li>
+            <li><em>"Explain the Page 7 SDI = 1.0 anomaly"</em></li>
+            <li><em>"Compare random, systematic, and stratified sampling"</em></li>
+            <li><em>"Compare r-strategists and K-strategists"</em></li>
+            <li><em>"Quiz me with a practice question!"</em></li>
+          </ul>
+        `;
+      }
+
+      // 2. Quiz Me / Test Me request in Chat
+      if (q.includes('quiz me') || q.includes('test me') || q.includes('give me a question') || q.includes('practice question')) {
+        const randomCard = FLASHCARDS[Math.floor(Math.random() * FLASHCARDS.length)];
+        return `
+          <p class="font-bold text-emerald-800">🎯 Rapid QCAA Recall Question (${randomCard.verb}):</p>
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-800">
+            ${randomCard.front}
+          </div>
+          <details class="text-xs mt-2 bg-emerald-50/70 p-2.5 rounded-lg border border-emerald-200 cursor-pointer">
+            <summary class="font-bold text-emerald-800">Click to reveal QCAA Marking Key</summary>
+            <div class="mt-2 text-slate-700 space-y-1">${randomCard.back}</div>
+            <div class="mt-1 font-semibold text-emerald-900">Key Criteria: ${randomCard.keypoints}</div>
+          </details>
+        `;
+      }
+
+      // 3. Lincoln Index / Trap Happy / Trap Shy / Tag Loss / Capture-Recapture
+      if (q.includes('trap-happy') || q.includes('trap happy')) {
+        return `
+          <p class="font-bold text-emerald-800">QCAA Marking Rationale: "Trap-Happy" Behaviour (pg 4)</p>
+          <p><strong>Effect on Estimate:</strong> Causes an <strong>UNDERESTIMATION</strong> of the actual population size ($N$).</p>
+          <p><strong>Biological Mechanism:</strong> Introducing food bait in traps reinforces animals returning to traps regularly. Marked individuals purposefully re-enter traps, artificially inflating the number of marked individuals recaptured in the second sample (<strong>$m$ increases</strong>).</p>
+          <div class="p-2 bg-slate-50 border border-slate-200 rounded text-xs mono">N = (M × n) / m</div>
+          <p><strong>Mathematical Link:</strong> Because $m$ is the denominator, dividing $M \times n$ by a larger $m$ produces a <strong>smaller calculated value for $N$</strong>.</p>
+        `;
+      }
+
+      if (q.includes('trap-shy') || q.includes('trap shy')) {
+        return `
+          <p class="font-bold text-emerald-800">QCAA Marking Rationale: "Trap-Shy" Behaviour (pg 5)</p>
+          <p><strong>Effect on Estimate:</strong> Causes an <strong>OVERESTIMATION</strong> of the actual population size ($N$).</p>
+          <p><strong>Biological Mechanism:</strong> The trapping and handling process increases wariness/stress, deterring marked organisms from entering the trap again. This artificially lowers the number of marked individuals recaptured (<strong>$m$ decreases</strong>).</p>
+          <div class="p-2 bg-slate-50 border border-slate-200 rounded text-xs mono">N = (M × n) / m</div>
+          <p><strong>Mathematical Link:</strong> Because $m$ is in the denominator, dividing by a smaller $m$ artificially inflates $N$.</p>
+        `;
+      }
+
+      if (q.includes('tag') || q.includes('mark') && (q.includes('wash') || q.includes('lose') || q.includes('lost') || q.includes('fall') || q.includes('shed'))) {
+        return `
+          <p class="font-bold text-emerald-800">QCAA Marking Rationale: Tag Loss / Mark Fading (pg 5)</p>
+          <p><strong>Effect on Estimate:</strong> Causes an <strong>OVERESTIMATION</strong> of $N$.</p>
+          <p><strong>Mechanism:</strong> If tags break/fall off or paint marks wash off between captures, recaptured marked animals are misidentified as unmarked. This decreases $m$ (the denominator in $N = \frac{M \times n}{m}$), inflating the population estimate $N$.</p>
+        `;
+      }
+
+      if (q.includes('lincoln') || q.includes('capture-recapture') || q.includes('capture recapture')) {
+        return `
+          <p class="font-bold text-emerald-800">Lincoln Index & Capture-Recapture Overview (pg 4–5)</p>
+          <div class="p-2 bg-slate-50 border border-slate-200 rounded text-xs mono">N = (M × n) / m</div>
+          <p>• <strong>$N$:</strong> Estimated total population size<br>• <strong>$M$:</strong> Number of individuals caught, marked, and released in 1st capture<br>• <strong>$n$:</strong> TOTAL individuals caught in 2nd capture<br>• <strong>$m$:</strong> Number of MARKED individuals recaptured in 2nd capture</p>
+          <p><strong>Key Limitations / Issues (pg 4–5):</strong></p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li><strong>Weather conditions:</strong> Rain/cold may cause animals to shelter, skewing capture numbers.</li>
+            <li><strong>Trap-happy (food reward):</strong> Increases $m \rightarrow$ <strong>underestimates</strong> $N$.</li>
+            <li><strong>Trap-shy (handling stress):</strong> Decreases $m \rightarrow$ <strong>overestimates</strong> $N$.</li>
+            <li><strong>Tag/mark loss:</strong> Decreases $m \rightarrow$ <strong>overestimates</strong> $N$.</li>
+            <li><strong>Timing between captures:</strong> Too short = insufficient mixing/dispersion; too long = deaths, births, or migration alter proportions.</li>
+            <li><strong>Mortality:</strong> Relies on living organisms; if marked organisms die, $m$ drops $\rightarrow$ <strong>overestimates</strong> $N$.</li>
+          </ul>
+        `;
+      }
+
+      // 4. Biological Species Concept & Limitations
+      if (q.includes('biological species') || q.includes('species concept') || q.includes('limitation') || q.includes('ring species') || q.includes('hybrid') || q.includes('apomixis') || q.includes('subspecies')) {
+        return `
+          <p class="font-bold text-emerald-800">Biological Species Concept & Limitations (pg 1)</p>
+          <p><strong>Definition:</strong> A species is a group of similar organisms that are able to interbreed and produce <strong>viable, fertile offspring</strong> (<em>viable</em> = living; <em>fertile</em> = able to breed).</p>
+          <p><strong>5 Key Syllabus Limitations:</strong></p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li><strong>1. Fossils & Extinct Organisms:</strong> Dead organisms cannot breed; impossible to observe mating or test offspring fertility.</li>
+            <li><strong>2. Asexual Reproduction & Apomixis:</strong> Organisms like bacteria, archaea, and apomictic plants reproduce without interbreeding.</li>
+            <li><strong>3. Ring Species:</strong> Populations around a geographic barrier (mountain/lake) interbreed with neighbours, but terminal populations at opposite ends cannot interbreed.</li>
+            <li><strong>4. Selective Infertility:</strong> Eusocial insects (bees, ants, wasps) have sterile worker castes that cannot breed despite being part of the species.</li>
+            <li><strong>5. Subspecies & Varieties:</strong> Populations with physical variations that can still interbreed and produce viable, fertile offspring.</li>
+          </ul>
+          <p class="text-xs text-slate-600"><strong>Note on Hybrids:</strong> Offspring of two different species of the same Genus interbreeding (e.g. mule); hybrids are typically <strong>sterile</strong> due to mismatched chromosomes during meiosis.</p>
+        `;
+      }
+
+      // 5. Genetic, Species, Ecosystem Diversity
+      if (q.includes('genetic diversity') || q.includes('ecosystem diversity') || (q.includes('diversity') && !q.includes('simpson') && !q.includes('sdi') && !q.includes('index'))) {
+        return `
+          <p class="font-bold text-emerald-800">Levels of Biodiversity (pg 1)</p>
+          <ul class="list-disc pl-4 space-y-1.5 text-xs">
+            <li><strong>Biodiversity (Broad):</strong> The wide variety of organisms (plants, animals, bacteria, etc.) existing within a space.</li>
+            <li><strong>Genetic Diversity:</strong> The variation of genes, between organisms, <em>within a species</em>. Essential for adaptation to changing environments.</li>
+            <li><strong>Species Diversity:</strong> The variation in types (<strong>richness</strong>) and amount/abundance (<strong>evenness</strong>) of species <em>within an ecosystem</em>.</li>
+            <li><strong>Ecosystem Diversity:</strong> The variation of habitats, communities, and ecological processes that occur <em>between ecosystems</em>.</li>
+          </ul>
+        `;
+      }
+
+      // 6. Linnaean Classification & Dichotomous Keys
+      if (q.includes('linnaean') || q.includes('taxa') || q.includes('binomial') || q.includes('nomenclature') || q.includes('hierarchy') || q.includes('dichotomous')) {
+        return `
+          <p class="font-bold text-emerald-800">Linnaean Classification & Dichotomous Keys (pg 2–3)</p>
+          <p><strong>Taxonomic Hierarchy (Most General $\rightarrow$ Least General):</strong><br>
+          <span class="mono text-xs bg-slate-100 px-2 py-0.5 rounded">Domain → Kingdom → Phylum → Class → Order → Family → Genus → Species</span></p>
+          <p><strong>Binomial Nomenclature Rules (pg 2):</strong></p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li>Uses <strong>Genus</strong> (capital letter at start) + <strong>species</strong> (entirely lower case).</li>
+            <li><strong>Typed digitally:</strong> Must be in <em>italics</em> (e.g. <em>Homo sapiens</em>).</li>
+            <li><strong>Written by hand:</strong> Must be <u>underlined</u> (e.g. <u>Homo sapiens</u>).</li>
+          </ul>
+          <p><strong>Dichotomous Keys (pg 2–3):</strong> Identify organisms based on observable physical traits using paired choices:<br>
+          • <em>Branching Key:</em> Visual tree diagram.<br>
+          • <em>Tabular Key:</em> Numbered text statements/couplets with "Go to..." instructions.</p>
+        `;
+      }
+
+      // 7. Simpson's Diversity Index, Menhinick, Evenness, Cover, Frequency
+      if (q.includes('simpson') || q.includes('sdi') || q.includes('menhinick') || q.includes('richness') || q.includes('evenness') || q.includes('anomaly') || q.includes('page 7') || q.includes('percentage cover') || q.includes('percentage frequency')) {
+        return `
+          <p class="font-bold text-emerald-800">Measures of Diversity & Formulas (pg 5–7)</p>
+          <ul class="list-disc pl-4 space-y-1.5 text-xs">
+            <li><strong>Species Richness ($s$):</strong> Number of unique species present. For large samples, use the <strong>Menhinick Index:</strong> <span class="mono bg-slate-100 px-1 rounded">S = s / √N</span>.</li>
+            <li><strong>Species Evenness (Relative Abundance):</strong> How evenly organisms are distributed across species: <span class="mono bg-slate-100 px-1 rounded">RA = (TS / TP) × 100</span>.</li>
+            <li><strong>Percentage Cover:</strong> Visual estimate of ground area covered by vegetation; tends to <em>overrepresent higher canopy strata</em> and <em>underrepresent lower strata</em>.</li>
+            <li><strong>Percentage Frequency:</strong> How often a species occurs across quadrats: <span class="mono bg-slate-100 px-1 rounded">PF = (Sites present / Total sites) × 100</span>.</li>
+            <li><strong>Simpson's Diversity Index ($SDI$):</strong> Incorporates both richness and abundance:<br>
+            <span class="mono bg-slate-100 px-1.5 py-0.5 rounded block my-1">SDI = 1 - [ Σ n(n - 1) / N(N - 1) ]</span>
+            Scale: 0 to 1 (higher = more diverse).</li>
+            <li><strong>Page 7 Anomaly Warning:</strong> If Species A has $n=1$ and Species B has $n=1$ ($N=2$), then $\sum n(n-1) = 0$, giving $SDI = 1 - 0 = 1.0$. This is <strong>erroneous</strong> because the habitat actually has minimal diversity (only 2 individuals total!).</li>
+          </ul>
+        `;
+      }
+
+      // 8. Sampling Methods, Techniques & Minimising Bias
+      if (q.includes('sampling') || q.includes('stratified') || q.includes('systematic') || q.includes('random') || q.includes('quadrat') || q.includes('transect') || q.includes('bias') || q.includes('precision') || q.includes('accuracy')) {
+        return `
+          <p class="font-bold text-emerald-800">Sampling Methods, Techniques & Minimising Bias (pg 7–11)</p>
+          <p><strong>1. Sampling Methods:</strong></p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li><strong>Random Sampling:</strong> Every individual/site has an equal chance of selection (uses random number generators to prevent human edge avoidance bias).</li>
+            <li><strong>Systematic Sampling:</strong> Samples taken at fixed, regular intervals (predetermined distance, time, or height).</li>
+            <li><strong>Stratified Sampling:</strong> Study site divided into distinct zones (<strong>strata</strong>) based on an abiotic factor or vegetation type; random sampling occurs within each stratum proportional to its size.</li>
+          </ul>
+          <p><strong>2. Sampling Techniques:</strong></p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li><strong>Quadrats:</strong> Square frames for plants/sessile organisms (unsuitable for mobile animals).</li>
+            <li><strong>Line Transect:</strong> Single line along an abiotic gradient (records organisms touching the line).</li>
+            <li><strong>Belt Transect:</strong> Two parallel lines a set distance apart (records organisms between the lines).</li>
+          </ul>
+          <p><strong>3. Minimising Bias (pg 9–11):</strong> Comparable sample sizes & sufficient replicates, random number generators, strict counting criteria, equipment calibration, and noting <strong>precision</strong> (repeatability) vs <strong>accuracy</strong> (closeness to true value).</p>
+        `;
+      }
+
+      // 9. Biotic & Abiotic Factors, Tolerance, Distribution Patterns
+      if (q.includes('biotic') || q.includes('abiotic') || q.includes('competition') || q.includes('interspecific') || q.includes('intraspecific') || q.includes('predation') || q.includes('tolerance') || q.includes('shelford') || q.includes('clumped') || q.includes('uniform') || q.includes('distribution')) {
+        return `
+          <p class="font-bold text-emerald-800">Distribution, Abundance, Factors & Tolerance (pg 11–15)</p>
+          <p>• <strong>Distribution:</strong> How spread out a population is.<br>• <strong>Abundance:</strong> How many organisms are in a single location.</p>
+          <ul class="list-disc pl-4 space-y-1 text-xs">
+            <li><strong>Biotic Factors (Living):</strong> Food availability (heterotrophs), <strong>Interspecific competition</strong> (different species $\rightarrow$ affects abundance), <strong>Intraspecific competition</strong> (same species $\rightarrow$ affects <em>both</em> distribution & abundance), <strong>Predation</strong> (coupled predator-prey oscillations), and <strong>Disease</strong> (density-dependent).</li>
+            <li><strong>Abiotic Factors (Non-living):</strong> Space, shelter, water, nutrients, temperature, humidity, wind, pH, salinity, water currents, topography.</li>
+            <li><strong>Tolerance Curve (pg 14):</strong> <em>Optimum range</em> (greatest abundance) flanked by <em>zones of physiological stress</em> (marginal niche) and <em>zones of intolerance</em> (unavailable niche).</li>
+            <li><strong>Spatial Distribution Patterns (pg 14–15):</strong><br>
+            • <em>Clumped:</em> Most common; patchy resources or group/pack behaviour.<br>
+            • <em>Uniform:</em> Rare; caused by competition for space/territoriality (e.g. nesting birds).<br>
+            • <em>Random:</em> Rare; small area or little abiotic variation.</li>
+          </ul>
+        `;
+      }
+
+      // 10. Specht's & Holdridge
+      if (q.includes('specht') || q.includes('holdridge')) {
+        return `
+          <p class="font-bold text-emerald-800">Ecosystem Classification Systems (pg 15)</p>
+          <ul class="list-disc pl-4 space-y-1.5 text-xs">
+            <li><strong>Specht's Classification System:</strong> Classifies Australian vegetation using two criteria:<br>
+            1. <em>Growth form and height of the tallest stratum</em> (e.g. trees >30m, 10–30m, <10m, shrubs).<br>
+            2. <em>Foliage projective cover</em> of the tallest stratum (Dense 70–100%, Mid-dense 30–70%, Sparse 10–30%, Very sparse <10%).</li>
+            <li><strong>Holdridge Life Zone Scheme:</strong> Global bioclimatic classification based on three axes: <em>Annual precipitation</em>, <em>Mean annual biotemperature</em> (0°C–30°C), and <em>Potential evapotranspiration (PET) ratio</em>.</li>
+          </ul>
+        `;
+      }
+
+      // 11. Population Growth, J-curve, S-curve, r/K strategists
+      if (q.includes('r-strategist') || q.includes('k-strategist') || q.includes('r and k') || q.includes('r- and k-') || q.includes('j-curve') || q.includes('s-curve') || q.includes('exponential') || q.includes('logistic') || q.includes('carrying capacity') || q.includes('growth rate')) {
+        return `
+          <p class="font-bold text-emerald-800">Population Growth & r/K Reproductive Strategies (pg 16–17)</p>
+          <ul class="list-disc pl-4 space-y-1.5 text-xs">
+            <li><strong>Exponential Growth (J-Curve):</strong> Population grows rapidly without limiting factors (typical of <em>r-selected</em> species like bacteria).</li>
+            <li><strong>Logistic Growth (S-Curve):</strong> Population grows rapidly then plateaus at the <strong>Carrying Capacity ($K$)</strong>—the sustainable number of organisms supported without depleting resources (typical of <em>K-selected</em> species).</li>
+            <li><strong>r-Strategists:</strong> Short lifespan, small size, fast maturation, early reproduction, many offspring, low parental care, not competitive, unstable environments.</li>
+            <li><strong>K-Strategists:</strong> Long lifespan, larger size, slow maturation, later reproduction, few offspring, high parental care, competitive for resources, stable environments at $K$.</li>
+            <li><strong>Population Growth Rate Formula:</strong> <span class="mono bg-slate-100 px-1.5 py-0.5 rounded">r = (b + i) - (d + e)</span> where $b$ = births, $i$ = immigration, $d$ = deaths, $e$ = emigration. Impacted by density-dependent and density-independent factors.</li>
+          </ul>
+        `;
+      }
+
+      // 12. Smart Semantic Search across all 42 Flashcards & 50 Exam Questions
+      const words = q.replace(/[^a-z0-9\s]/g, '').split(/\s+/).filter(w => w.length > 2 && !['what', 'why', 'how', 'the', 'and', 'for', 'are', 'explain', 'describe', 'tell', 'about', 'can', 'you'].includes(w));
+      let bestCard = null;
+      let bestScore = 0;
+
+      FLASHCARDS.forEach(c => {
+        const hay = (c.front + ' ' + c.back + ' ' + c.keypoints).toLowerCase();
+        let score = 0;
+        words.forEach(w => {
+          if (hay.includes(w)) score += 2;
+        });
+        if (score > bestScore) {
+          bestScore = score;
+          bestCard = c;
+        }
+      });
+
+      if (bestCard && bestScore > 0) {
+        return `
+          <p class="font-bold text-emerald-800">QCAA Syllabus Match: ${bestCard.front}</p>
+          <div class="text-xs sm:text-sm text-slate-700 leading-relaxed space-y-1">${bestCard.back}</div>
+          <div class="p-2 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-900">
+            <strong>Key Marking Points:</strong> ${bestCard.keypoints} <span class="text-slate-400">(${bestCard.ref})</span>
+          </div>
+        `;
+      }
+
+      // 13. General helpful overview if no specific keyword matched
+      return `
+        <p class="font-bold text-emerald-800">QCAA Unit 3 Topic 1 Study Coach</p>
+        <p>Here is a quick summary of the core syllabus areas you can ask me to break down in detail:</p>
+        <ul class="list-disc pl-4 space-y-1 text-xs text-slate-700">
+          <li><strong>Biodiversity & Species Concept (pg 1):</strong> Genetic, species, ecosystem diversity & 5 limitations of the biological species concept.</li>
+          <li><strong>Classification & Keys (pg 2–3, 15):</strong> Linnaean hierarchy, binomial nomenclature rules, dichotomous keys, Specht's & Holdridge systems.</li>
+          <li><strong>Population & Diversity Math (pg 4–7, 17):</strong> Lincoln Index $N = (M \times n)/m$, Simpson's Diversity Index $SDI$, Menhinick index, and Growth Rate $r = (b+i)-(d+e)$.</li>
+          <li><strong>Sampling & Bias (pg 7–11):</strong> Random, systematic, and stratified sampling; quadrats vs transects; precision vs accuracy.</li>
+          <li><strong>Ecological Factors & Growth Curves (pg 11–17):</strong> Biotic/abiotic factors, Shelford's tolerance range, clumped/uniform/random distributions, J-curve vs S-curve, and $r$- vs $K$-strategists.</li>
+        </ul>
+        <p class="text-xs text-emerald-700 font-medium">Tip: Type <em>"Quiz me"</em> for an instant practice flashcard question, or click <strong>Exam Drill</strong> above to practice 3-mark short-response questions!</p>
+      `;
+    }
+
+    // Live Gemini API Call with automatic multi-model discovery and fallback
+    async function queryLiveGemini(userText) {
+      const cleanKey = customGeminiKey.trim();
+      const systemContext = `You are an expert QCAA Queensland Senior Biology teacher and external exam marker for Unit 3 Topic 1 (Biodiversity and Populations), grounded in the Bradshaw Topic Overview PDF:
+- Genetic, species, and ecosystem diversity (pg 1)
+- Biological species concept (viable, fertile offspring) & 5 limitations: fossils/extinct, asexual/apomixis, ring species, selective infertility (bees/ants), subspecies/varieties, sterile hybrids (pg 1)
+- Linnaean hierarchy: Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species; binomial nomenclature: Genus capitalised, species lower case, italics when digital, underlined when handwritten (pg 2)
+- Dichotomous keys: branching (tree) vs tabular (text statements) (pg 2-3)
+- Lincoln index: N = (M * n) / m; 8 capture-recapture steps; biases: weather, trap-happy (m increases -> N underestimated), trap-shy (m decreases -> N overestimated), tag loss (m decreases -> N overestimated), timing, mortality (pg 4-5)
+- Diversity measures: Species richness, Menhinick index S = s / sqrt(N), Relative abundance RA = (TS/TP)*100, Percentage cover (overrepresents upper strata), Percentage frequency PF = (sites present/total sites)*100, Simpson's Diversity Index SDI = 1 - [sum n(n-1) / N(N-1)], Page 7 anomaly (N=2, s=2 gives SDI=1.0 erroneously) (pg 5-7)
+- Sampling: Random, Systematic, Stratified; Quadrats (sessile/plants only), Line transect, Belt transect, Capture-recapture; Minimising bias: sample size/number, random number generators (avoids human edge bias), counting criteria, calibration, precision vs accuracy (pg 7-11)
+- Biotic factors (food, interspecific vs intraspecific competition, predator-prey oscillations, disease) & Abiotic factors; Shelford's tolerance curve (optimum range, zones of physiological stress, zones of intolerance); Distribution patterns: clumped (most common), uniform (competition), random (pg 11-15)
+- Specht's classification (tallest stratum growth form + foliage projective cover) & Holdridge life zone scheme (pg 15)
+- Exponential growth (J-curve, r-selected) vs Logistic growth (S-curve, carrying capacity K, K-selected); r- vs K-strategists traits; Population growth rate r = (b + i) - (d + e) (pg 16-17).
+Answer the student's question clearly, concisely, and aligned with QCAA marking criteria.`;
+
+      // Candidate models for both Vertex AI Express Mode (AQ. keys) and Google AI Studio (AQ. / AIza keys)
+      let candidateModels = [
+        'gemini-2.5-flash',
+        'gemini-2.0-flash',
+        'gemini-2.0-flash-001',
+        'gemini-1.5-flash',
+        'gemini-1.5-pro'
+      ];
+
+      // Include role: "user" so both Vertex AI (aiplatform.googleapis.com) and AI Studio (generativelanguage.googleapis.com) accept the payload
+      const payload = {
+        contents: [{ role: 'user', parts: [{ text: `${systemContext}\n\nStudent Question: ${userText}` }] }]
+      };
+
+      // Build ordered list of endpoints to try (AQ. keys work with Vertex AI Express Mode or Generative Language API)
+      const isAqKey = cleanKey.startsWith('AQ.');
+      const endpointTemplates = isAqKey
+        ? [
+            (m) => `https://aiplatform.googleapis.com/v1/publishers/google/models/${m}:generateContent?key=${encodeURIComponent(cleanKey)}`,
+            (m) => `https://aiplatform.googleapis.com/v1beta1/publishers/google/models/${m}:generateContent?key=${encodeURIComponent(cleanKey)}`,
+            (m) => `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(cleanKey)}`
+          ]
+        : [
+            (m) => `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(cleanKey)}`,
+            (m) => `https://aiplatform.googleapis.com/v1/publishers/google/models/${m}:generateContent?key=${encodeURIComponent(cleanKey)}`
+          ];
+
+      let lastStatus = 0;
+      for (const makeUrl of endpointTemplates) {
+        for (const modelName of candidateModels) {
+          try {
+            const url = makeUrl(modelName);
+            const resp = await fetch(url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            lastStatus = resp.status;
+            if (resp.ok) {
+              const data = await resp.json();
+              const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+              if (text) {
+                return text
+                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                  .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                  .replace(/\n/g, '<br>');
+              }
+            }
+            // If this endpoint host rejected the key type (401/403), break inner model loop and try next endpoint host
+            if (resp.status === 401 || resp.status === 403) {
+              break;
+            }
+          } catch (fetchErr) {
+            break;
+          }
+        }
+      }
+
+      throw new Error(`HTTP ${lastStatus}`);
+    }
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      appendMessage('user', text);
+      chatInput.value = '';
+
+      // Check if evaluating exam drill
+      if (currentTutorMode === 'drill') {
+        evaluateDrillAnswer(text);
+        return;
+      }
+
+      // Support both AQ. (Google Auth / Vertex Express Mode) and AIza (Standard Gemini) keys
+      if (isValidApiKeyFormat(customGeminiKey)) {
+        const loadingId = 'loading-' + Date.now();
+        appendMessage('bot', `<span id="${loadingId}" class="text-slate-400 italic">Consulting Gemini Bio-Examiner...</span>`);
+        try {
+          const liveAnswer = await queryLiveGemini(text);
+          const elem = document.getElementById(loadingId);
+          if (elem) elem.parentElement.innerHTML = liveAnswer;
+        } catch(err) {
+          const elem = document.getElementById(loadingId);
+          if (elem) {
+            elem.parentElement.innerHTML = answerSyllabusQuery(text);
+          }
+        }
+      } else {
+        // Use embedded QCAA Knowledge Engine seamlessly
+        setTimeout(() => {
+          const answer = answerSyllabusQuery(text);
+          appendMessage('bot', answer);
+        }, 200);
+      }
+    });
+
+    // Suggested Prompt Pills
+    document.querySelectorAll('.prompt-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        chatInput.value = pill.textContent.trim();
+        chatForm.dispatchEvent(new Event('submit'));
+      });
+    });
+
+    // Mode Toggle in Tutor
+    document.getElementById('tutor-mode-chat').addEventListener('click', () => {
+      currentTutorMode = 'chat';
+      document.getElementById('tutor-mode-chat').className = 'tutor-mode-btn active px-2.5 py-1 text-xs font-semibold rounded-md bg-emerald-600 text-white shadow-sm';
+      document.getElementById('tutor-mode-drill').className = 'tutor-mode-btn px-2.5 py-1 text-xs font-semibold rounded-md text-slate-300 hover:text-white';
+      chatInput.placeholder = 'Ask a question about Unit 3 Topic 1...';
+    });
+
+    document.getElementById('tutor-mode-drill').addEventListener('click', () => {
+      currentTutorMode = 'drill';
+      document.getElementById('tutor-mode-drill').className = 'tutor-mode-btn active px-2.5 py-1 text-xs font-semibold rounded-md bg-purple-600 text-white shadow-sm';
+      document.getElementById('tutor-mode-chat').className = 'tutor-mode-btn px-2.5 py-1 text-xs font-semibold rounded-md text-slate-300 hover:text-white';
+      chatInput.placeholder = 'Type your response to the drill scenario here and press Send...';
+      loadCurrentDrillIntoChat();
+    });
+
+    // Exam Drill Logic
+    function renderDrillScenario() {
+      const drill = DRILL_SCENARIOS[currentDrillIndex];
+      document.getElementById('drill-marks-badge').textContent = `[${drill.marks} Marks]`;
+      document.getElementById('drill-question-title').textContent = drill.title;
+      document.getElementById('drill-question-text').textContent = drill.question;
+    }
+
+    function loadCurrentDrillIntoChat() {
+      const drill = DRILL_SCENARIOS[currentDrillIndex];
+      appendMessage('bot', `
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2 py-0.5 rounded">QCAA Exam Drill [${drill.marks} Marks]</span>
+          <p class="font-bold text-slate-800">${drill.title}</p>
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-slate-700 leading-relaxed">
+            "${drill.question}"
+          </div>
+          <p class="text-xs text-slate-500 font-medium">Type your student answer in the input box below and hit <strong>Send</strong>. I'll mark your response against the QCAA rubric criteria!</p>
+        </div>
+      `);
+    }
+
+    document.getElementById('btn-load-drill').addEventListener('click', () => {
+      // Switch tab to AI Tutor if not already
+      document.querySelector('[data-tab="ai-tutor"]').click();
+      document.getElementById('tutor-mode-drill').click();
+    });
+
+    document.getElementById('btn-next-drill').addEventListener('click', () => {
+      currentDrillIndex = (currentDrillIndex + 1) % DRILL_SCENARIOS.length;
+      renderDrillScenario();
+      if (currentTutorMode === 'drill') {
+        loadCurrentDrillIntoChat();
+      }
+    });
+
+    function evaluateDrillAnswer(studentAns) {
+      const drill = DRILL_SCENARIOS[currentDrillIndex];
+      const lower = studentAns.toLowerCase();
+      
+      let marksAwarded = 0;
+      const criteriaResults = [];
+
+      drill.criteria.forEach((crit, idx) => {
+        let met = false;
+        // Semantic keyword checking per scenario
+        if (drill.id === 1) { // Trap happy
+          if (idx === 0 && (lower.includes('happy') || lower.includes('reward') || lower.includes('food') || lower.includes('bait'))) met = true;
+          if (idx === 1 && (lower.includes('m') || lower.includes('recapture') || lower.includes('more marked') || lower.includes('increase'))) met = true;
+          if (idx === 2 && (lower.includes('underestimate') || lower.includes('smaller') || lower.includes('lower') || lower.includes('denominator'))) met = true;
+        } else if (drill.id === 2) { // Species concept
+          if (idx === 0 && (lower.includes('interbreed') || lower.includes('fertile') || lower.includes('viable'))) met = true;
+          if (idx === 1 && (lower.includes('asexual') || lower.includes('binary fission') || lower.includes('clone'))) met = true;
+          if (idx === 2 && (lower.includes('fossil') || lower.includes('dead') || lower.includes('extinct') || lower.includes('cannot test') || lower.includes('cannot observe'))) met = true;
+        } else if (drill.id === 3) { // r vs K
+          if (idx === 0 && (lower.includes('r-strategist') || lower.includes('r-selected') || lower.includes('r strategist'))) met = true;
+          if (idx === 1 && (lower.includes('offspring') || lower.includes('fecundity') || lower.includes('many') || lower.includes('fast') || lower.includes('exponential') || lower.includes('j-curve'))) met = true;
+          if (idx === 2 && (lower.includes('unstable') || lower.includes('disturb') || lower.includes('pioneer') || lower.includes('low competition') || lower.includes('mature'))) met = true;
+        } else { // Sampling gradient
+          if (idx === 0 && (lower.includes('gradient') || lower.includes('salinity') || lower.includes('moisture') || lower.includes('distance') || lower.includes('abiotic'))) met = true;
+          if (idx === 1 && (lower.includes('miss') || lower.includes('random') || lower.includes('chance') || lower.includes('cluster'))) met = true;
+          if (idx === 2 && (lower.includes('transect') || lower.includes('stratif') || lower.includes('systematic') || lower.includes('zone') || lower.includes('strata'))) met = true;
+        }
+
+        if (met) {
+          marksAwarded++;
+          criteriaResults.push(`<li class="text-emerald-700">✅ <strong>Criterion ${idx+1} [1 Mark]:</strong> ${crit}</li>`);
+        } else {
+          criteriaResults.push(`<li class="text-rose-600">❌ <strong>Criterion ${idx+1} [0 Marks]:</strong> ${crit}</li>`);
+        }
+      });
+
+      appendMessage('bot', `
+        <div class="space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+            <span class="font-bold text-sm text-slate-800">QCAA Examiner Assessment</span>
+            <span class="text-xs font-extrabold px-2.5 py-1 rounded-full ${marksAwarded === drill.marks ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}">
+              Score: ${marksAwarded} / ${drill.marks} Marks
+            </span>
+          </div>
+
+          <div>
+            <h5 class="text-xs font-bold text-slate-700 mb-1">Rubric Criteria Breakdown:</h5>
+            <ul class="space-y-1 text-xs">
+              ${criteriaResults.join('')}
+            </ul>
+          </div>
+
+          <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1 text-xs">
+            <span class="font-bold text-slate-800 block">Exemplar Full-Mark Response:</span>
+            <p class="text-slate-600 leading-relaxed italic">${drill.exemplar}</p>
+          </div>
+        </div>
+      `);
+    }
+
+    // Save & Clear Gemini Key
+    document.getElementById('btn-save-key').addEventListener('click', () => {
+      const key = document.getElementById('gemini-api-key').value.trim();
+      customGeminiKey = key;
+      try {
+        localStorage.setItem('qcaa_gemini_key', key);
+      } catch(e) {}
+      if (isValidApiKeyFormat(key)) {
+        const keyType = key.startsWith('AQ.') ? 'Google Auth / Vertex Express Key' : 'Gemini API Key';
+        document.getElementById('key-status').textContent = `Status: ${keyType} Active (saved on this device)`;
+        document.getElementById('key-status').className = 'text-[10px] text-emerald-600 font-semibold';
+      } else if (key) {
+        document.getElementById('key-status').textContent = 'Status: Key format unrecognized — using built-in QCAA Engine';
+        document.getElementById('key-status').className = 'text-[10px] text-amber-600 font-medium';
+      } else {
+        document.getElementById('key-status').textContent = 'Status: Using embedded QCAA Syllabus Knowledge Engine';
+        document.getElementById('key-status').className = 'text-[10px] text-slate-400';
+      }
+    });
+
+    document.getElementById('btn-clear-key').addEventListener('click', () => {
+      customGeminiKey = '';
+      document.getElementById('gemini-api-key').value = '';
+      try {
+        localStorage.removeItem('qcaa_gemini_key');
+      } catch(e) {}
+      document.getElementById('key-status').textContent = 'Status: Cleared — Using embedded QCAA Syllabus Knowledge Engine';
+      document.getElementById('key-status').className = 'text-[10px] text-emerald-600 font-medium';
+    });
+
+    // --- 5. Bio Calculators & Workbenches Logic ---
+    // Calculator Sub-Tabs
+    const calcTabLincoln = document.getElementById('calc-tab-lincoln');
+    const calcTabSimpson = document.getElementById('calc-tab-simpson');
+    const calcTabGrowth = document.getElementById('calc-tab-growth');
+
+    const calcPanelLincoln = document.getElementById('calc-panel-lincoln');
+    const calcPanelSimpson = document.getElementById('calc-panel-simpson');
+    const calcPanelGrowth = document.getElementById('calc-panel-growth');
+
+    function switchCalcTab(activeBtn, activePanel) {
+      [calcTabLincoln, calcTabSimpson, calcTabGrowth].forEach(b => {
+        b.className = 'calc-tab-btn px-4 py-2 rounded-xl text-sm font-bold bg-slate-200 text-slate-700 hover:bg-slate-300';
+      });
+      activeBtn.className = 'calc-tab-btn active px-4 py-2 rounded-xl text-sm font-bold bg-emerald-600 text-white shadow-sm';
+
+      [calcPanelLincoln, calcPanelSimpson, calcPanelGrowth].forEach(p => p.classList.add('hidden'));
+      activePanel.classList.remove('hidden');
+    }
+
+    calcTabLincoln.addEventListener('click', () => switchCalcTab(calcTabLincoln, calcPanelLincoln));
+    calcTabSimpson.addEventListener('click', () => switchCalcTab(calcTabSimpson, calcPanelSimpson));
+    calcTabGrowth.addEventListener('click', () => {
+      switchCalcTab(calcTabGrowth, calcPanelGrowth);
+      if (!growthChartInstance) initGrowthChart();
+    });
+
+    // Lincoln Calculator Logic
+    const inputM = document.getElementById('input-M');
+    const inputn = document.getElementById('input-n');
+    const inputm = document.getElementById('input-m');
+
+    function calculateLincoln() {
+      const M = parseFloat(inputM.value) || 0;
+      const n = parseFloat(inputn.value) || 0;
+      const m = parseFloat(inputm.value) || 1;
+
+      document.getElementById('out-M').textContent = M;
+      document.getElementById('out-n').textContent = n;
+      document.getElementById('out-m').textContent = m;
+
+      let N = 0;
+      if (m > 0) {
+        N = Math.round((M * n) / m);
+      }
+      document.getElementById('lincoln-result').textContent = N;
+    }
+
+    [inputM, inputn, inputm].forEach(inp => inp.addEventListener('input', calculateLincoln));
+
+    // Bias Simulator Buttons
+    const biasBtns = document.querySelectorAll('.bias-btn');
+    function setBiasActive(btn) {
+      biasBtns.forEach(b => {
+        b.className = 'bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50';
+      });
+      btn.className = 'bias-btn px-2.5 py-1.5 rounded-lg text-xs font-medium border border-slate-200 bg-emerald-50 text-emerald-800 border-emerald-400 font-bold';
+    }
+
+    document.getElementById('bias-normal').addEventListener('click', () => {
+      setBiasActive(document.getElementById('bias-normal'));
+      inputM.value = 50;
+      inputn.value = 60;
+      inputm.value = 10;
+      document.getElementById('bias-explanation').textContent = 'Normal estimation without simulated behavioural skew (N = 300).';
+      document.getElementById('bias-explanation').className = 'text-xs text-slate-300 bg-slate-800/60 p-2.5 rounded-lg border border-slate-700';
+      calculateLincoln();
+    });
+
+    document.getElementById('bias-happy').addEventListener('click', () => {
+      setBiasActive(document.getElementById('bias-happy'));
+      inputM.value = 50;
+      inputn.value = 60;
+      inputm.value = 25; // Marked count inflated due to bait
+      document.getElementById('bias-explanation').innerHTML = '<strong>Trap-Happy Skew:</strong> Animals repeatedly returned for bait, inflating <em>m</em> from 10 to 25. Notice that <strong>N dropped from 300 to 120 (UNDERESTIMATED)</strong>!';
+      document.getElementById('bias-explanation').className = 'text-xs text-amber-200 bg-amber-950/40 p-2.5 rounded-lg border border-amber-500/30';
+      calculateLincoln();
+    });
+
+    document.getElementById('bias-shy').addEventListener('click', () => {
+      setBiasActive(document.getElementById('bias-shy'));
+      inputM.value = 50;
+      inputn.value = 60;
+      inputm.value = 4; // Animals avoided traps
+      document.getElementById('bias-explanation').innerHTML = '<strong>Trap-Shy Skew:</strong> Animals avoided traps due to handling trauma, reducing <em>m</em> from 10 to 4. Notice that <strong>N jumped from 300 to 750 (OVERESTIMATED)</strong>!';
+      document.getElementById('bias-explanation').className = 'text-xs text-rose-200 bg-rose-950/40 p-2.5 rounded-lg border border-rose-500/30';
+      calculateLincoln();
+    });
+
+    document.getElementById('bias-tagloss').addEventListener('click', () => {
+      setBiasActive(document.getElementById('bias-tagloss'));
+      inputM.value = 50;
+      inputn.value = 60;
+      inputm.value = 3; // Tags detached
+      document.getElementById('bias-explanation').innerHTML = '<strong>Tag Loss Skew:</strong> Tags fell off 7 marked animals, reducing visible <em>m</em> to 3. The formula erroneously calculated <strong>N = 1000 (MASSIVELY OVERESTIMATED)</strong>!';
+      document.getElementById('bias-explanation').className = 'text-xs text-rose-200 bg-rose-950/40 p-2.5 rounded-lg border border-rose-500/30';
+      calculateLincoln();
+    });
+
+    // Simpson's Diversity Index (SDI) Table Logic
+    let sdiSpeciesData = [
+      { name: 'Eucalyptus grandis', n: 35 },
+      { name: 'Corymbia citriodora', n: 25 },
+      { name: 'Acacia concurrens', n: 15 },
+      { name: 'Banksia integrifolia', n: 10 },
+      { name: 'Melaleuca quinquenervia', n: 5 }
+    ];
+
+    function renderSDITable() {
+      const tbody = document.getElementById('sdi-table-body');
+      tbody.innerHTML = '';
+
+      let totalN = 0;
+      let sumNumerator = 0;
+
+      sdiSpeciesData.forEach((sp, idx) => {
+        const count = Math.max(0, parseInt(sp.n) || 0);
+        const countMinus1 = Math.max(0, count - 1);
+        const product = count * countMinus1;
+
+        totalN += count;
+        sumNumerator += product;
+
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-50';
+        tr.innerHTML = `
+          <td class="p-3">
+            <input type="text" value="${sp.name}" data-idx="${idx}" class="sdi-name-input w-full px-2 py-1 bg-transparent border-b border-transparent hover:border-slate-300 focus:border-emerald-500 focus:outline-none">
+          </td>
+          <td class="p-3">
+            <input type="number" min="0" value="${count}" data-idx="${idx}" class="sdi-count-input w-24 px-2 py-1 bg-slate-50 border border-slate-300 rounded font-semibold text-slate-800">
+          </td>
+          <td class="p-3 font-mono text-slate-600">${countMinus1}</td>
+          <td class="p-3 font-mono font-bold text-teal-700">${product}</td>
+          <td class="p-3 text-center">
+            <button data-idx="${idx}" class="btn-del-species text-slate-400 hover:text-rose-600 text-sm">🗑️</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Totals
+      const totalNminus1 = Math.max(0, totalN - 1);
+      const denominator = totalN * totalNminus1;
+      let ratio = 0;
+      let sdi = 0;
+
+      if (denominator > 0) {
+        ratio = sumNumerator / denominator;
+        sdi = 1 - ratio;
+      }
+
+      document.getElementById('sdi-total-N').textContent = `N = ${totalN}`;
+      document.getElementById('sdi-total-Nminus1').textContent = `N - 1 = ${totalNminus1}`;
+      document.getElementById('sdi-total-sum').textContent = `Σ = ${sumNumerator}`;
+
+      document.getElementById('sdi-calc-den').textContent = denominator;
+      document.getElementById('sdi-calc-ratio').textContent = ratio.toFixed(4);
+      document.getElementById('sdi-calc-final').textContent = sdi.toFixed(4);
+
+      // Check for Page 7 Anomaly
+      const warningBanner = document.getElementById('sdi-warning-banner');
+      if (totalN === 2 && sdiSpeciesData.length === 2 && sdi === 1.0) {
+        warningBanner.classList.remove('hidden');
+      } else {
+        warningBanner.classList.add('hidden');
+      }
+
+      // Attach row event listeners
+      document.querySelectorAll('.sdi-count-input').forEach(inp => {
+        inp.addEventListener('input', (e) => {
+          const i = parseInt(e.target.getAttribute('data-idx'));
+          sdiSpeciesData[i].n = parseInt(e.target.value) || 0;
+          renderSDITable();
+        });
+      });
+
+      document.querySelectorAll('.sdi-name-input').forEach(inp => {
+        inp.addEventListener('change', (e) => {
+          const i = parseInt(e.target.getAttribute('data-idx'));
+          sdiSpeciesData[i].name = e.target.value;
+        });
+      });
+
+      document.querySelectorAll('.btn-del-species').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const i = parseInt(btn.getAttribute('data-idx'));
+          sdiSpeciesData.splice(i, 1);
+          renderSDITable();
+        });
+      });
+    }
+
+    document.getElementById('btn-add-species').addEventListener('click', () => {
+      sdiSpeciesData.push({ name: `Species ${String.fromCharCode(65 + sdiSpeciesData.length)}`, n: 5 });
+      renderSDITable();
+    });
+
+    // Presets
+    document.getElementById('sdi-preset-rainforest').addEventListener('click', () => {
+      sdiSpeciesData = [
+        { name: 'Ficus watkinsiana (Strangler Fig)', n: 40 },
+        { name: 'Toona ciliata (Red Cedar)', n: 38 },
+        { name: 'Argyrodendron peralatum (Tulip Oak)', n: 35 },
+        { name: 'Archontophoenix alexandrae', n: 32 },
+        { name: 'Castanospermum australe', n: 30 },
+        { name: 'Syzygium luehmannii', n: 28 },
+        { name: 'Pouteria pohlmaniana', n: 25 },
+        { name: 'Flindersia brayleyana', n: 22 }
+      ];
+      renderSDITable();
+    });
+
+    document.getElementById('sdi-preset-monoculture').addEventListener('click', () => {
+      sdiSpeciesData = [
+        { name: 'Pinus radiata (Pine)', n: 350 },
+        { name: 'Rubus fruticosus (Weed Blackberry)', n: 6 },
+        { name: 'Pteridium esculentum (Bracken)', n: 4 }
+      ];
+      renderSDITable();
+    });
+
+    document.getElementById('sdi-preset-anomaly').addEventListener('click', () => {
+      sdiSpeciesData = [
+        { name: 'Species A', n: 1 },
+        { name: 'Species B', n: 1 }
+      ];
+      renderSDITable();
+    });
+
+    // Population Growth Rate Workbench
+    const rangeB = document.getElementById('range-b');
+    const rangeI = document.getElementById('range-i');
+    const rangeD = document.getElementById('range-d');
+    const rangeE = document.getElementById('range-e');
+    const rangeK = document.getElementById('range-K');
+
+    function updateGrowthCalculation() {
+      const b = parseInt(rangeB.value);
+      const i = parseInt(rangeI.value);
+      const d = parseInt(rangeD.value);
+      const e = parseInt(rangeE.value);
+      const K = parseInt(rangeK.value);
+
+      document.getElementById('val-b').textContent = b;
+      document.getElementById('val-i').textContent = i;
+      document.getElementById('val-d').textContent = d;
+      document.getElementById('val-e').textContent = e;
+      document.getElementById('val-K').textContent = K;
+
+      const r = (b + i) - (d + e);
+      const sign = r >= 0 ? '+' : '';
+      document.getElementById('growth-r-result').textContent = `${sign}${r}`;
+
+      updateGrowthChartData(r, K);
+    }
+
+    [rangeB, rangeI, rangeD, rangeE, rangeK].forEach(r => r.addEventListener('input', updateGrowthCalculation));
+
+    function initGrowthChart() {
+      const ctx = document.getElementById('growthChart').getContext('2d');
+      const timeLabels = ['Year 0', 'Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8', 'Year 9', 'Year 10'];
+      
+      growthChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: timeLabels,
+          datasets: [
+            {
+              label: 'Exponential (J-Curve, r-selected)',
+              data: [50, 75, 115, 175, 270, 420, 650, 1000, 1500, 2300, 3500],
+              borderColor: '#2563eb',
+              backgroundColor: 'rgba(37, 99, 235, 0.08)',
+              borderWidth: 2.5,
+              tension: 0.3,
+              fill: false
+            },
+            {
+              label: 'Logistic (S-Curve, K-selected)',
+              data: [50, 85, 150, 260, 380, 460, 490, 500, 502, 498, 500],
+              borderColor: '#059669',
+              backgroundColor: 'rgba(5, 150, 105, 0.08)',
+              borderWidth: 2.5,
+              tension: 0.3,
+              fill: false
+            },
+            {
+              label: 'Carrying Capacity (K)',
+              data: [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500],
+              borderColor: '#dc2626',
+              borderDash: [6, 4],
+              borderWidth: 2,
+              pointRadius: 0,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 } } },
+            tooltip: { mode: 'index', intersect: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: 'Population Size (N)', font: { size: 11 } }
+            },
+            x: {
+              title: { display: true, text: 'Time Progression', font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    function updateGrowthChartData(r, K) {
+      if (!growthChartInstance) return;
+
+      const N0 = 50;
+      const rate = Math.max(0.05, (r / 200) + 0.2);
+
+      const expData = [];
+      const logData = [];
+      const kData = [];
+
+      for (let t = 0; t <= 10; t++) {
+        // Exponential: N0 * e^(rt)
+        const expVal = Math.round(N0 * Math.exp(rate * t * 0.7));
+        expData.push(Math.min(2500, expVal));
+
+        // Logistic: K / (1 + ((K - N0)/N0) * e^(-rt))
+        const logVal = Math.round(K / (1 + ((K - N0) / N0) * Math.exp(-rate * t * 1.2)));
+        logData.push(logVal);
+
+        kData.push(K);
+      }
+
+      growthChartInstance.data.datasets[0].data = expData;
+      growthChartInstance.data.datasets[1].data = logData;
+      growthChartInstance.data.datasets[2].data = kData;
+      growthChartInstance.update();
+    }
+
+    document.getElementById('curve-toggle-both').addEventListener('click', () => {
+      if (!growthChartInstance) return;
+      growthChartInstance.data.datasets[0].hidden = false;
+      growthChartInstance.data.datasets[1].hidden = false;
+      growthChartInstance.update();
+    });
+
+    document.getElementById('curve-toggle-j').addEventListener('click', () => {
+      if (!growthChartInstance) return;
+      growthChartInstance.data.datasets[0].hidden = false;
+      growthChartInstance.data.datasets[1].hidden = true;
+      growthChartInstance.update();
+    });
+
+    document.getElementById('curve-toggle-s').addEventListener('click', () => {
+      if (!growthChartInstance) return;
+      growthChartInstance.data.datasets[0].hidden = true;
+      growthChartInstance.data.datasets[1].hidden = false;
+      growthChartInstance.update();
+    });
+
+    // --- 6. Practice Exam Component ---
+    function renderPracticeExam() {
+      // Pick 20 fresh random questions from the master pool
+      currentExamQuestions = generateRandomExam(20);
+
+      const container = document.getElementById('exam-questions-container');
+      container.innerHTML = '';
+
+      currentExamQuestions.forEach((q, qIdx) => {
+        const qCard = document.createElement('div');
+        qCard.className = 'bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3';
+        qCard.id = `exam-q-${qIdx}`;
+
+        let optsHtml = '';
+        q.options.forEach((opt, optIdx) => {
+          optsHtml += `
+            <label class="flex items-start gap-3 p-3 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer text-xs transition-colors">
+              <input type="radio" name="exam_q_${qIdx}" value="${optIdx}" class="mt-0.5 accent-emerald-600">
+              <span class="text-slate-700 leading-relaxed">${opt}</span>
+            </label>
+          `;
+        });
+
+        qCard.innerHTML = `
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Question ${qIdx + 1} of ${currentExamQuestions.length}</span>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600" id="q-status-${qIdx}">1 Mark</span>
+          </div>
+          <h4 class="font-bold text-sm text-slate-800 leading-snug">${q.question}</h4>
+          <div class="space-y-2">
+            ${optsHtml}
+          </div>
+          <div id="q-feedback-${qIdx}" class="hidden p-3 rounded-xl text-xs space-y-1"></div>
+        `;
+        container.appendChild(qCard);
+      });
+    }
+
+    function submitAndGradeExam() {
+      let score = 0;
+      const total = currentExamQuestions.length;
+
+      currentExamQuestions.forEach((q, idx) => {
+        const selected = document.querySelector(`input[name="exam_q_${idx}"]:checked`);
+        const feedbackDiv = document.getElementById(`q-feedback-${idx}`);
+        const statusSpan = document.getElementById(`q-status-${idx}`);
+
+        feedbackDiv.classList.remove('hidden');
+
+        if (selected && parseInt(selected.value) === q.answer) {
+          score++;
+          statusSpan.textContent = 'Correct (+1)';
+          statusSpan.className = 'text-xs font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800';
+          feedbackDiv.className = 'p-3 rounded-xl text-xs bg-emerald-50 border border-emerald-200 text-emerald-900';
+          feedbackDiv.innerHTML = `<strong>✅ Correct!</strong> ${q.explanation}`;
+        } else {
+          statusSpan.textContent = 'Incorrect (0)';
+          statusSpan.className = 'text-xs font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-800';
+          feedbackDiv.className = 'p-3 rounded-xl text-xs bg-rose-50 border border-rose-200 text-rose-900';
+          const correctText = q.options[q.answer];
+          feedbackDiv.innerHTML = `<strong>❌ Incorrect.</strong> Correct Answer: <em>${correctText}</em>.<br>${q.explanation}`;
+        }
+      });
+
+      const pct = Math.round((score / total) * 100);
+      const banner = document.getElementById('exam-results-banner');
+      banner.classList.remove('hidden');
+      document.getElementById('exam-score-percentage').textContent = `${score} / ${total} (${pct}%)`;
+
+      let comment = '';
+      if (pct >= 85) comment = 'Outstanding! You have thoroughly mastered QCAA Unit 3 Topic 1 concepts and calculations!';
+      else if (pct >= 70) comment = 'Great job! Review the questions you missed using the flashcards and practice exam drills.';
+      else comment = 'Keep reviewing! Focus on the Lincoln Index bias sources and Simpson\'s Diversity Index criteria.';
+      document.getElementById('exam-score-comment').textContent = comment;
+
+      banner.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function resetExamAndRegenerate() {
+      renderPracticeExam();
+      document.getElementById('exam-results-banner').classList.add('hidden');
+      const examTop = document.getElementById('section-practice-exam');
+      if (examTop) examTop.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Attach to both Top and Bottom Submit & Reset Buttons
+    document.getElementById('btn-submit-exam').addEventListener('click', submitAndGradeExam);
+    document.getElementById('btn-submit-exam-bottom').addEventListener('click', submitAndGradeExam);
+
+    document.getElementById('btn-reset-exam').addEventListener('click', resetExamAndRegenerate);
+    document.getElementById('btn-reset-exam-bottom').addEventListener('click', resetExamAndRegenerate);
+
+    // --- 7. Application Initialization ---
+    window.addEventListener('DOMContentLoaded', () => {
+      updateMasteryUI();
+      renderCurrentCard();
+      renderDrillScenario();
+      renderSDITable();
+      calculateLincoln();
+      renderPracticeExam();
+    });
+  </script>
+</body>
+</html>
