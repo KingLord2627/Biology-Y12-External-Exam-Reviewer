@@ -408,6 +408,47 @@
       color: #ffffff !important;
     }
 
+    
+    /* Showy Subject Switcher Cards & Glow Effects */
+    @keyframes pulse-glow-emerald {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.35), 0 10px 25px -5px rgba(16, 185, 129, 0.3); }
+      50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0), 0 15px 30px -5px rgba(16, 185, 129, 0.5); }
+    }
+    @keyframes pulse-glow-cyan {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.35), 0 10px 25px -5px rgba(6, 182, 212, 0.3); }
+      50% { box-shadow: 0 0 0 6px rgba(6, 182, 212, 0), 0 15px 30px -5px rgba(6, 182, 212, 0.5); }
+    }
+    .subject-card-active-bio {
+      background: linear-gradient(135deg, #065f46 0%, #047857 50%, #0f766e 100%) !important;
+      border-color: #34d399 !important;
+      color: #ffffff !important;
+      animation: pulse-glow-emerald 3s infinite;
+      transform: translateY(-2px);
+    }
+    .subject-card-active-phys {
+      background: linear-gradient(135deg, #164e63 0%, #0e7490 50%, #1d4ed8 100%) !important;
+      border-color: #22d3ee !important;
+      color: #ffffff !important;
+      animation: pulse-glow-cyan 3s infinite;
+      transform: translateY(-2px);
+    }
+    .subject-card-inactive {
+      background: rgba(15, 23, 42, 0.75) !important;
+      border-color: #334155 !important;
+      color: #cbd5e1 !important;
+      opacity: 0.88;
+    }
+    .subject-card-inactive:hover {
+      background: rgba(30, 41, 59, 0.95) !important;
+      border-color: #64748b !important;
+      color: #ffffff !important;
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    html:not(.dark) #subject-hub-banner {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%) !important;
+    }
+
     /* Exam Option Selected State */
     .exam-opt-label.selected-opt {
       border-color: #10b981 !important;
@@ -445,47 +486,110 @@
 
 
   <!-- ======================================================== -->
-  <!-- UNIFIED QCAA SUBJECT SWITCHER BAR (BIOLOGY & PHYSICS)    -->
+  <!-- SHOWY QCAA SUBJECT SWITCHER HERO DECK (BIOLOGY & PHYSICS) -->
   <!-- ======================================================== -->
-  <div class="bg-slate-950 border-b border-slate-800 text-white z-50 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+  <section id="subject-hub-banner" class="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-b-2 border-emerald-500/40 text-white z-40 relative shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 space-y-4">
       
-      <!-- Brand & Subject Selector Pills -->
-      <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-        <div class="flex items-center gap-2 pr-2 border-r border-slate-800">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" id="active-subject-dot"></span>
-          <span class="text-xs font-extrabold uppercase tracking-wider text-slate-300">QCAA Study Portal</span>
+      <!-- Top Utility Row: Portal Badge, Active Status Pill, Ko-fi & Theme Toggle -->
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800/80 pb-3">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-emerald-400 animate-ping" id="active-subject-dot"></span>
+          <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 bg-clip-text text-transparent">
+            🎓 QCAA Senior Science Exam Portal • Switch Subject Anytime
+          </span>
         </div>
 
-        <div class="flex items-center bg-slate-900 p-1 rounded-xl border border-slate-800 gap-1" role="tablist" aria-label="Choose Subject to Review">
-          <button type="button" id="btn-switch-biology" data-subject="biology" class="subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-emerald-600 text-white shadow-sm cursor-pointer">
-            <span>🧬</span>
-            <span>Biology <span class="hidden md:inline font-normal opacity-90">(Unit 3 • Topic 1)</span></span>
-          </button>
-          <button type="button" id="btn-switch-physics" data-subject="physics" class="subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/70 cursor-pointer">
-            <span>⚛️</span>
-            <span>Physics <span class="hidden md:inline font-normal opacity-90">(Units 3 &amp; 4)</span></span>
+        <div class="flex items-center gap-2 ml-auto">
+          <span id="active-subject-pill" class="hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm">
+            Reviewing: Senior Biology (42 Cards • 50 Exam Qs)
+          </span>
+          <a href="https://ko-fi.com/lhmplan" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs shadow-md transition-all flex items-center gap-1.5 hover:scale-105">
+            <span>☕</span>
+            <span>Buy Lhem a Coffee</span>
+          </a>
+          <button id="btn-theme-toggle" type="button" title="Switch between Dark Mode and Light Mode" class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 border border-slate-600 shadow-sm shrink-0 cursor-pointer">
+            <span id="theme-toggle-icon">☀️</span>
+            <span id="theme-toggle-label">Light</span>
           </button>
         </div>
       </div>
 
-      <!-- Global Controls: Subject Quick-Status, Ko-fi & Theme Toggle -->
-      <div class="flex items-center gap-2 ml-auto">
-        <span id="active-subject-pill" class="hidden lg:inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-          Reviewing: Senior Biology (42 Cards • 50 Exam Qs)
-        </span>
-        <a href="https://ko-fi.com/lhmplan" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold text-xs shadow-sm transition-all flex items-center gap-1.5">
-          <span>☕</span>
-          <span class="hidden sm:inline">Buy Lhem a Coffee</span>
-        </a>
-        <button id="btn-theme-toggle" type="button" title="Switch between Dark Mode and Light Mode" class="px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 bg-slate-900 hover:bg-slate-800 text-amber-300 border border-slate-700 shadow-sm shrink-0 cursor-pointer">
-          <span id="theme-toggle-icon">☀️</span>
-          <span id="theme-toggle-label">Light</span>
+      <!-- Giant Interactive Dual-Card Subject Switcher -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4" role="tablist" aria-label="Choose Subject to Review">
+        
+        <!-- BIOLOGY GIANT SWITCH CARD -->
+        <button type="button" id="btn-switch-biology" data-subject="biology" class="subject-switch-btn subject-card-active-bio w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden">
+          <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/25 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shrink-0 group-hover:scale-110 transition-transform">
+              🧬
+            </div>
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-emerald-300 text-slate-950 shadow-sm">
+                  QCAA Senior Biology
+                </span>
+                <span class="text-xs font-semibold text-emerald-100">Unit 3 • Topic 1</span>
+              </div>
+              <div class="text-base sm:text-lg font-extrabold text-white truncate">
+                Biodiversity &amp; Populations
+              </div>
+              <div class="text-xs text-emerald-100/90 mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span>🃏 42 Flip Cards</span>
+                <span>•</span>
+                <span>🧮 Lincoln &amp; SDI Math</span>
+                <span>•</span>
+                <span>📝 50-Q Exam Bank</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shrink-0 flex flex-col items-end justify-center gap-1.5">
+            <span id="bio-switch-badge" class="px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-white text-emerald-900 shadow-md flex items-center gap-1.5">
+              <span>✓</span> <span>Active</span>
+            </span>
+            <span class="text-[11px] font-semibold text-emerald-100 hidden sm:inline">Currently Viewing</span>
+          </div>
         </button>
+
+        <!-- PHYSICS GIANT SWITCH CARD -->
+        <button type="button" id="btn-switch-physics" data-subject="physics" class="subject-switch-btn subject-card-inactive w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden">
+          <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-cyan-500/20 backdrop-blur-sm border border-cyan-400/30 flex items-center justify-center text-3xl sm:text-4xl shadow-lg shrink-0 group-hover:scale-110 transition-transform">
+              ⚛️
+            </div>
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-cyan-400 text-slate-950 shadow-sm">
+                  QCAA Senior Physics
+                </span>
+                <span class="text-xs font-semibold text-cyan-200">Units 3 &amp; 4</span>
+              </div>
+              <div class="text-base sm:text-lg font-extrabold text-white truncate">
+                Gravity, Electromagnetism &amp; Quantum
+              </div>
+              <div class="text-xs text-slate-300 mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span>🃏 26 Flip Cards</span>
+                <span>•</span>
+                <span>🧮 24 Formula Calcs</span>
+                <span>•</span>
+                <span>📝 Practice Quiz</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="shrink-0 flex flex-col items-end justify-center gap-1.5">
+            <span id="phys-switch-badge" class="px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md flex items-center gap-1.5 group-hover:scale-105 transition-transform">
+              <span>⚡</span> <span>Switch</span> <span>→</span>
+            </span>
+            <span class="text-[11px] font-semibold text-cyan-300 hidden sm:inline">Click to Open Physics</span>
+          </div>
+        </button>
+
       </div>
 
     </div>
-  </div>
+  </section>
 
   <!-- ======================================================== -->
   <!-- SUBJECT 1: QCAA SENIOR BIOLOGY REVIEWER                  -->
@@ -525,6 +629,9 @@
         </button>
         <button data-tab="reference" class="nav-btn px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all flex items-center gap-1.5 bg-slate-800/60 hover:bg-slate-700/80 text-slate-200 hover:text-white">
           <span>📚</span> Syllabus Sheet
+        </button>
+        <button type="button" id="btn-header-jump-physics" class="ml-1 px-3.5 py-1.5 rounded-xl text-sm font-extrabold transition-all flex items-center gap-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-md shadow-cyan-500/25 border border-cyan-300/40 hover:scale-105 cursor-pointer shrink-0" title="Switch immediately to QCAA Senior Physics">
+          <span>⚛️</span> <span>Switch to Physics</span> <span>→</span>
         </button>
       </nav>
     </div>
@@ -1537,6 +1644,11 @@
 
         <!-- Right Action Controls -->
         <div class="flex items-center flex-wrap gap-2">
+          <!-- Quick Subject Switch to Biology -->
+          <button type="button" id="btn-header-jump-biology" class="px-3.5 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white shadow-md shadow-emerald-500/25 border border-emerald-300/40 hover:scale-105 cursor-pointer" title="Switch immediately to QCAA Senior Biology">
+            <span>🧬</span> <span>Switch to Biology</span> <span>→</span>
+          </button>
+
           <!-- Mode Switchers -->
           <div class="bg-slate-800/80 p-1 rounded-xl border border-slate-700/60 flex items-center text-xs font-medium">
             <button id="nav-mode-flashcards" class="px-3 py-1.5 rounded-lg bg-cyan-600 text-white font-semibold shadow transition flex items-center gap-1.5">
@@ -2257,6 +2369,20 @@
       <p class="text-[10px] text-slate-400 leading-tight mt-0.5 truncate">Free QCAA study tool • Support creator</p>
     </div>
   </aside>
+
+  
+  <!-- FLOATING ALWAYS-VISIBLE SUBJECT SWITCHER DOCK (BOTTOM-RIGHT) -->
+  <div id="floating-subject-dock" class="fixed bottom-5 right-5 z-40 bg-slate-900/95 backdrop-blur-md border-2 border-emerald-500/50 p-1.5 rounded-2xl shadow-2xl flex items-center gap-1.5 transition-all hover:scale-[1.02]">
+    <span class="text-[10px] font-extrabold uppercase tracking-wider px-2 text-slate-300 hidden sm:inline">Switch:</span>
+    <button type="button" id="btn-dock-biology" class="px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 bg-emerald-600 text-white shadow-sm cursor-pointer">
+      <span>🧬</span>
+      <span>Biology <span class="hidden md:inline font-normal opacity-90">(Unit 3 • Topic 1)</span></span>
+    </button>
+    <button type="button" id="btn-dock-physics" class="px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 text-slate-300 hover:text-white hover:bg-slate-800 cursor-pointer">
+      <span>⚛️</span>
+      <span>Physics <span class="hidden md:inline font-normal opacity-90">(Units 3 &amp; 4)</span></span>
+    </button>
+  </div>
 
   <!-- TOAST NOTIFICATION -->
   <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-800 border border-slate-700 text-slate-200 text-xs px-4 py-2.5 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2 pointer-events-none">
@@ -4746,26 +4872,70 @@ Answer the student's question clearly, concisely, and aligned with QCAA marking 
         physWrapper.classList.toggle('hidden', !isPhys);
       }
 
+      const hubBanner = document.getElementById('subject-hub-banner');
+      if (hubBanner) {
+        hubBanner.classList.toggle('border-cyan-500/40', isPhys);
+        hubBanner.classList.toggle('border-emerald-500/40', !isPhys);
+      }
+
+      const bioBadge = document.getElementById('bio-switch-badge');
+      const physBadge = document.getElementById('phys-switch-badge');
+
       if (btnSwitchBio && btnSwitchPhys) {
         if (isPhys) {
-          btnSwitchPhys.className = 'subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-cyan-600 text-white shadow-sm cursor-pointer';
-          btnSwitchBio.className = 'subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/70 cursor-pointer';
+          btnSwitchPhys.className = 'subject-switch-btn subject-card-active-phys w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden';
+          btnSwitchBio.className = 'subject-switch-btn subject-card-inactive w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden';
+          if (physBadge) {
+            physBadge.className = 'px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-white text-cyan-950 shadow-md flex items-center gap-1.5';
+            physBadge.innerHTML = '<span>✓</span> <span>Active</span>';
+            if (physBadge.nextElementSibling) physBadge.nextElementSibling.textContent = 'Currently Viewing';
+          }
+          if (bioBadge) {
+            bioBadge.className = 'px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-md flex items-center gap-1.5 group-hover:scale-105 transition-transform';
+            bioBadge.innerHTML = '<span>⚡</span> <span>Switch</span> <span>→</span>';
+            if (bioBadge.nextElementSibling) bioBadge.nextElementSibling.textContent = 'Click to Open Biology';
+          }
         } else {
-          btnSwitchBio.className = 'subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 bg-emerald-600 text-white shadow-sm cursor-pointer';
-          btnSwitchPhys.className = 'subject-switch-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-2 text-slate-400 hover:text-white hover:bg-slate-800/70 cursor-pointer';
+          btnSwitchBio.className = 'subject-switch-btn subject-card-active-bio w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden';
+          btnSwitchPhys.className = 'subject-switch-btn subject-card-inactive w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all duration-300 flex items-center justify-between gap-4 cursor-pointer group relative overflow-hidden';
+          if (bioBadge) {
+            bioBadge.className = 'px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-white text-emerald-900 shadow-md flex items-center gap-1.5';
+            bioBadge.innerHTML = '<span>✓</span> <span>Active</span>';
+            if (bioBadge.nextElementSibling) bioBadge.nextElementSibling.textContent = 'Currently Viewing';
+          }
+          if (physBadge) {
+            physBadge.className = 'px-3 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md flex items-center gap-1.5 group-hover:scale-105 transition-transform';
+            physBadge.innerHTML = '<span>⚡</span> <span>Switch</span> <span>→</span>';
+            if (physBadge.nextElementSibling) physBadge.nextElementSibling.textContent = 'Click to Open Physics';
+          }
         }
+      }
+
+      const dockEl = document.getElementById('floating-subject-dock');
+      const dBio = document.getElementById('btn-dock-biology');
+      const dPhys = document.getElementById('btn-dock-physics');
+      if (dockEl && dBio && dPhys) {
+        dockEl.className = isPhys
+          ? 'fixed bottom-5 right-5 z-40 bg-slate-900/95 backdrop-blur-md border-2 border-cyan-400/60 p-1.5 rounded-2xl shadow-2xl flex items-center gap-1.5 transition-all hover:scale-[1.02]'
+          : 'fixed bottom-5 right-5 z-40 bg-slate-900/95 backdrop-blur-md border-2 border-emerald-500/60 p-1.5 rounded-2xl shadow-2xl flex items-center gap-1.5 transition-all hover:scale-[1.02]';
+        dBio.className = isPhys
+          ? 'px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 text-slate-300 hover:text-white hover:bg-slate-800 cursor-pointer'
+          : 'px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 bg-emerald-600 text-white shadow-sm cursor-pointer';
+        dPhys.className = isPhys
+          ? 'px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 bg-cyan-600 text-white shadow-sm cursor-pointer'
+          : 'px-3 py-1.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-1.5 text-slate-300 hover:text-white hover:bg-slate-800 cursor-pointer';
       }
 
       if (activeSubjectDot) {
         activeSubjectDot.className = isPhys
-          ? 'w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse'
-          : 'w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse';
+          ? 'w-3 h-3 rounded-full bg-cyan-400 animate-ping'
+          : 'w-3 h-3 rounded-full bg-emerald-400 animate-ping';
       }
 
       if (activeSubjectPill) {
         activeSubjectPill.className = isPhys
-          ? 'hidden lg:inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-cyan-500/15 text-cyan-300 border border-cyan-500/30'
-          : 'hidden lg:inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30';
+          ? 'hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
+          : 'hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm';
         activeSubjectPill.textContent = isPhys
           ? 'Reviewing: Senior Physics (Units 3 & 4 • 24 Calculators)'
           : 'Reviewing: Senior Biology (42 Cards • 50 Exam Qs)';
@@ -4782,6 +4952,28 @@ Answer the student's question clearly, concisely, and aligned with QCAA marking 
 
     if (btnSwitchBio) btnSwitchBio.addEventListener('click', () => switchSubject('biology'));
     if (btnSwitchPhys) btnSwitchPhys.addEventListener('click', () => switchSubject('physics'));
+
+    const btnDockBio = document.getElementById('btn-dock-biology');
+    const btnDockPhys = document.getElementById('btn-dock-physics');
+    const floatingDock = document.getElementById('floating-subject-dock');
+    if (btnDockBio) btnDockBio.addEventListener('click', () => {
+      switchSubject('biology');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    if (btnDockPhys) btnDockPhys.addEventListener('click', () => {
+      switchSubject('physics');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const btnHeaderJumpPhys = document.getElementById('btn-header-jump-physics');
+    const btnHeaderJumpBio = document.getElementById('btn-header-jump-biology');
+    if (btnHeaderJumpPhys) btnHeaderJumpPhys.addEventListener('click', () => {
+      switchSubject('physics');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    if (btnHeaderJumpBio) btnHeaderJumpBio.addEventListener('click', () => {
+      switchSubject('biology');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     try {
       const savedSubj = localStorage.getItem('qcaa_active_subject');
